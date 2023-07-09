@@ -1,12 +1,9 @@
 :root {
     --navHeight: 80px;
     --backgroundColor: #222;
+    --darkerBackground: #161616;
     --mainColor: #ddd;
     --secondColor: #d33;
-}
-
-body {
-    background-color: #111;
 }
 
 ul,

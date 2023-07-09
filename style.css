@@ -1,5 +1,6 @@
 :root {
     --backgroundColor: #222;
+    --darkerBackground: #161616;
     --mainSecond: #aaa;
     --mainColor: #ddd;
     --secondColor: #d33;
@@ -11,7 +12,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--backgroundColor);
+    background-color: var(--darkerBackground);
     overflow: auto;
 }
 
