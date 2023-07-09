@@ -53,6 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
     menuCheckbox.addEventListener("change", function () {
         menuToggle.classList.toggle("checked", this.checked);
         isNavbarVisible = this.checked;
+        if (!isNavbarVisible && window.innerWidth < 1300) {
+            navbarNav.classList.remove("slide-in");
+            navbarNav.classList.add("slide-out");
+            setTimeout(() => {
+                navbarNav.style.display = "none";
+                navbarNav.classList.remove("slide-out");
+            }, 300);
+        }
     });
 
     // Disable pointer events for the label
