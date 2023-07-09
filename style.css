@@ -1,0 +1,48 @@
+:root {
+    --backgroundColor: #222;
+    --mainSecond: #aaa;
+    --mainColor: #ddd;
+    --secondColor: #d33;
+}
+
+.maincontent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--backgroundColor);
+    overflow: auto;
+}
+
+.petosch-wel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+    font-size: 2rem;
+    position: sticky;
+    top: 0;
+}
+
+.petosch-wel img {
+    height: 40%;
+}
+
+.des {
+    color: var(--mainSecond);
+}
+
+.petosch-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-size: 2rem;
+    position: sticky;
+    top: 0;
+    background-color: #111;
+}
