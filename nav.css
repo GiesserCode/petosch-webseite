@@ -235,7 +235,6 @@ label {
         overflow: hidden;
         z-index: 3;
         background-color: var(--backgroundColor);
-        overflow-y: scroll;
         height: 100vh;
     }
 
