@@ -279,13 +279,15 @@ label {
         border-radius: 0px;
         display: none;
         z-index: 1;
+        background-color: var(--darkerBackground);
+        padding: 10px 0px 10px 0px;
     }
 
     .dropdown-menu li {
         padding: 0;
         position: static;
         height: 100%;
-        background-color: var(--backgroundColor);
+        background-color: var(--darkerBackground);
     }
 
     .dropdown-menu li a {
@@ -304,11 +306,5 @@ label {
         animation: slideOut 0.3s ease-in-out forwards;
     }
 
-    .dropdown-menu.slide-in {
-        animation: slideIn 0.3s ease-in-out forwards;
-    }
 
-    .dropdown-menu.slide-out {
-        animation: slideOut 0.3s ease-in-out forwards;
-    }
 }

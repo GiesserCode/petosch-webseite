@@ -9,19 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
             if (isActive) {
                 this.classList.remove("active");
                 const dropdownMenu = this.querySelector(".dropdown-menu");
-                dropdownMenu.classList.remove("slide-in");
-                dropdownMenu.classList.add("slide-out");
-                setTimeout(() => {
-                    dropdownMenu.style.display = "none";
-                    dropdownMenu.classList.remove("slide-out");
-                }, 300);
+                dropdownMenu.style.display = "none";
             } else {
                 this.classList.add("active");
                 const dropdownMenu = this.querySelector(".dropdown-menu");
-                dropdownMenu.classList.remove("slide-out");
-                dropdownMenu.classList.add("slide-in");
                 dropdownMenu.style.display = "flex";
             }
+        });
+    });
+
+    dropdownMenus.forEach((menu) => {
+        menu.addEventListener("click", function (event) {
+            event.stopPropagation();
         });
     });
 
@@ -33,16 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navMenuSmall.addEventListener("click", function () {
         if (isNavbarVisible) {
-            navbarNav.classList.remove("slide-in");
-            navbarNav.classList.add("slide-out");
-            setTimeout(() => {
-                navbarNav.style.display = "none";
-                navbarNav.classList.remove("slide-out");
-            }, 300);
+            navbarNav.style.display = "none";
             isNavbarVisible = false;
         } else {
-            navbarNav.classList.remove("slide-out");
-            navbarNav.classList.add("slide-in");
             navbarNav.style.display = "block";
             isNavbarVisible = true;
         }
@@ -54,12 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menuToggle.classList.toggle("checked", this.checked);
         isNavbarVisible = this.checked;
         if (!isNavbarVisible && window.innerWidth < 1300) {
-            navbarNav.classList.remove("slide-in");
-            navbarNav.classList.add("slide-out");
-            setTimeout(() => {
-                navbarNav.style.display = "none";
-                navbarNav.classList.remove("slide-out");
-            }, 300);
+            navbarNav.style.display = "none";
         }
     });
 
