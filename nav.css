@@ -179,6 +179,8 @@ label {
     transform: rotate(-45deg) translate(0, -14px);
 }
 
+
+
 @keyframes slideIn {
     0% {
         transform: translateY(-100%);
@@ -199,14 +201,7 @@ label {
     }
 }
 
-
-@media screen and (max-width: 1200px) {
-    .nav-item:first-child {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
 
     .nav-menu-small {
         z-index: 5;
@@ -240,6 +235,8 @@ label {
         overflow: hidden;
         z-index: 3;
         background-color: var(--backgroundColor);
+        overflow-y: scroll;
+        height: 100vh;
     }
 
     .house-icon {

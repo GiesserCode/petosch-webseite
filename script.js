@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Listen for window resize event
     window.addEventListener("resize", function () {
-        if (window.innerWidth > 1000) {
+        if (window.innerWidth > 1300) {
             navbarNav.style.display = "flex";
             isNavbarVisible = true;
         } else {
