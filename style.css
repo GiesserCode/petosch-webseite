@@ -1,10 +1,16 @@
 :root {
     --backgroundColor: #222;
-    --darkerBackground: #161616;
+    --darkerBackground: #181818;
     --mainSecond: #aaa;
     --mainColor: #ddd;
     --secondColor: #d33;
     --navHeight: 80px;
+    --dark: #090909;
+}
+
+::selection {
+    color: var(--secondColor);
+    background-color: var(--dark);
 }
 
 .maincontent {
@@ -41,7 +47,7 @@
 
 .petosch-products {
     z-index: 2;
-    background-color: var(--darkerBackground);
+    background-color: var(--backgroundColor);
     color: var(--mainColor);
     position: relative;
     padding-top: 2px;
@@ -63,7 +69,8 @@
 }
 
 .short-des {
-    height: 100px;
+    height: 60px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -87,7 +94,7 @@
 }
 
 .vertical-line {
-    width: 2px;
+    width: 4px;
     height: 160px;
     background-color: var(--mainColor);
 }
@@ -180,7 +187,7 @@
 }
 
 .placeholder {
-    height: 500px;
+    height: 200px;
 }
 
 @media screen and (max-width: 900px) {
@@ -200,7 +207,8 @@
     }
 
     .title {
-        font-size: 4rem;
+        font-size: 3rem;
+        width: 90%;
     }
 
     .we-do {

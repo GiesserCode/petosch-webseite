@@ -1,9 +1,11 @@
 :root {
-    --navHeight: 80px;
     --backgroundColor: #222;
-    --darkerBackground: #161616;
+    --darkerBackground: #181818;
+    --mainSecond: #aaa;
     --mainColor: #ddd;
     --secondColor: #d33;
+    --navHeight: 80px;
+    --dark: #090909;
 }
 
 ul,
@@ -18,7 +20,7 @@ li {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--backgroundColor);
+    background-color: var(--darkerBackground);
     display: flex;
     justify-content: space-between;
     height: var(--navHeight);
