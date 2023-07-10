@@ -272,7 +272,6 @@ label {
 
     .dropdown-menu {
         pointer-events: auto;
-        transform: translateY(0px);
         opacity: 1;
         position: static;
         width: 100%;
@@ -281,6 +280,7 @@ label {
         z-index: 1;
         background-color: var(--darkerBackground);
         padding: 10px 0px 10px 0px;
+        pointer-events: none;
     }
 
     .dropdown-menu li {
