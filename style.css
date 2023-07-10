@@ -13,6 +13,10 @@
     background-color: var(--dark);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .maincontent {
     width: 100%;
     height: 100vh;
@@ -20,7 +24,7 @@
     top: 0;
     left: 0;
     background-color: var(--darkerBackground);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .petosch-wel {
@@ -96,7 +100,7 @@
 .vertical-line {
     width: 4px;
     height: 160px;
-    border-radius: 2px;
+    border-radius: ;
     background-color: var(--mainColor);
 }
 
