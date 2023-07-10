@@ -20,7 +20,7 @@
     top: 0;
     left: 0;
     background-color: var(--darkerBackground);
-    overflow: auto;
+    overflow: hidden;
 }
 
 .petosch-wel {
