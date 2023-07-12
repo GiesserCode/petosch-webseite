@@ -298,7 +298,11 @@ body {
         margin: 30px 0 30px 0;
     }
 
+    .we-do .description {
+        order: 1;
+    }
+
     .we-do .thats-img {
-        order: -1;
+        order: 2;
     }
 }
