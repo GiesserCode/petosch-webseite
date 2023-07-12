@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Albertus';
+    src: url('./Assets/albr55w.ttf') format('truetype');
+}
+
 :root {
     --backgroundColor: #222;
     --darkerBackground: #181818;
@@ -6,6 +11,7 @@
     --secondColor: #d33;
     --navHeight: 80px;
     --dark: #090909;
+    --marginWeDo: 30px;
 }
 
 ::selection {
@@ -15,6 +21,10 @@
 
 body {
     overflow-x: hidden;
+}
+
+* {
+    font-family: 'Albertus', sans-serif;
 }
 
 .maincontent {
@@ -51,7 +61,7 @@ body {
 
 .petosch-products {
     z-index: 2;
-    background-color: var(--backgroundColor);
+    background-color: var(--darkerBackground);
     color: var(--mainColor);
     position: relative;
     padding-top: 2px;
@@ -93,14 +103,14 @@ body {
 .vertical {
     display: flex;
     justify-content: center;
-    height: 400px;
+    height: 200px;
     align-items: center;
 }
 
 .vertical-line {
     width: 4px;
-    height: 160px;
-    border-radius: ;
+    height: 80px;
+    border-radius: 40px;
     background-color: var(--mainColor);
 }
 
@@ -125,6 +135,34 @@ body {
     color: var(--darkerBackground);
 }
 
+#textil-img {
+    background-image: url('./images/textil.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#folien-img {
+    background-image: url('./images/folien.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#werbung-img {
+    background-image: url('./images/werb.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#about-img {
+    background-image: url('./images/about.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .description {
     width: 600px;
 }
@@ -133,19 +171,19 @@ body {
     color: var(--secondColor);
     letter-spacing: 6px;
     font-size: 1.6rem;
-    margin: 30px;
+    margin: var(--marginWeDo);
     padding: 0;
 }
 
 .description h2 {
-    margin: 30px;
+    margin: var(--marginWeDo);
     padding: 0;
     font-size: 3rem;
 }
 
 .description p {
     font-size: 1.8rem;
-    margin: 30px;
+    margin: var(--marginWeDo);
     padding: 0;
 }
 
@@ -158,7 +196,7 @@ body {
     border-radius: 40px;
     box-shadow: #000 10px 20px 50px;
     padding: 0;
-    margin: 30px;
+    margin: var(--marginWeDo);
     color: var(--mainColor);
     z-index: 1;
     background: var(--secondColor);
@@ -195,6 +233,8 @@ body {
     height: 200px;
 }
 
+
+
 @media screen and (max-width: 900px) {
     .petosch-wel img {
         width: 90%;
@@ -225,11 +265,12 @@ body {
     }
 
     .description button {
-        width: 90%;
+        width: 100%;
+        margin: 30px 0 30px 0;
     }
 
     .description button:hover {
-        width: 90%;
+        width: 100%;
     }
 
     .thats-img {
@@ -242,5 +283,22 @@ body {
 
     .we-do {
         gap: 100px;
+    }
+
+    .description p {
+        margin: 30px 0 30px 0;
+        font-size: 1.4rem;
+    }
+
+    .description h2 {
+        margin: 30px 0 30px 0;
+    }
+
+    .description h4 {
+        margin: 30px 0 30px 0;
+    }
+
+    .we-do .thats-img {
+        order: -1;
     }
 }

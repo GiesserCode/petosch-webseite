@@ -1,11 +1,12 @@
 :root {
+    --navHeight: 80px;
     --backgroundColor: #222;
-    --darkerBackground: #181818;
-    --mainSecond: #aaa;
     --mainColor: #ddd;
     --secondColor: #d33;
-    --navHeight: 80px;
-    --dark: #090909;
+}
+
+body {
+    background-color: #111;
 }
 
 ul,
@@ -20,12 +21,13 @@ li {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--darkerBackground);
+    background-color: var(--backgroundColor);
     display: flex;
     justify-content: space-between;
     height: var(--navHeight);
     z-index: 3;
 }
+
 
 .house-icon {
     padding: 10px;
@@ -181,8 +183,6 @@ label {
     transform: rotate(-45deg) translate(0, -14px);
 }
 
-
-
 @keyframes slideIn {
     0% {
         transform: translateY(-100%);
@@ -203,7 +203,14 @@ label {
     }
 }
 
-@media screen and (max-width: 1300px) {
+
+@media screen and (max-width: 1200px) {
+    .nav-item:first-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
 
     .nav-menu-small {
         z-index: 5;
@@ -237,6 +244,7 @@ label {
         overflow: hidden;
         z-index: 3;
         background-color: var(--backgroundColor);
+        overflow-y: scroll;
         height: 100vh;
     }
 
@@ -253,6 +261,7 @@ label {
         width: 100%;
         display: flex;
         flex-direction: column;
+        background-color: var(--backgroundColor);
     }
 
     .nav-link {
@@ -274,22 +283,20 @@ label {
 
     .dropdown-menu {
         pointer-events: auto;
+        transform: translateY(0px);
         opacity: 1;
         position: static;
         width: 100%;
         border-radius: 0px;
         display: none;
         z-index: 1;
-        background-color: var(--darkerBackground);
-        padding: 10px 0px 10px 0px;
-        pointer-events: none;
     }
 
     .dropdown-menu li {
         padding: 0;
         position: static;
         height: 100%;
-        background-color: var(--darkerBackground);
+        background-color: var(--backgroundColor);
     }
 
     .dropdown-menu li a {
@@ -308,5 +315,11 @@ label {
         animation: slideOut 0.3s ease-in-out forwards;
     }
 
+    .dropdown-menu.slide-in {
+        animation: slideIn 0.3s ease-in-out forwards;
+    }
 
+    .dropdown-menu.slide-out {
+        animation: slideOut 0.3s ease-in-out forwards;
+    }
 }

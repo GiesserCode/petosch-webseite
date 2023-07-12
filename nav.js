@@ -6,20 +6,22 @@ document.addEventListener("DOMContentLoaded", function () {
     navItems.forEach((item) => {
         item.addEventListener("click", function () {
             const isActive = this.classList.contains("active");
-            closeAllDropdownMenus(); // Close all dropdown menus before opening a new one
             if (isActive) {
                 this.classList.remove("active");
+                const dropdownMenu = this.querySelector(".dropdown-menu");
+                dropdownMenu.classList.remove("slide-in");
+                dropdownMenu.classList.add("slide-out");
+                setTimeout(() => {
+                    dropdownMenu.style.display = "none";
+                    dropdownMenu.classList.remove("slide-out");
+                }, 300);
             } else {
                 this.classList.add("active");
                 const dropdownMenu = this.querySelector(".dropdown-menu");
+                dropdownMenu.classList.remove("slide-out");
+                dropdownMenu.classList.add("slide-in");
                 dropdownMenu.style.display = "flex";
             }
-        });
-    });
-
-    dropdownMenus.forEach((menu) => {
-        menu.addEventListener("click", function (event) {
-            event.stopPropagation();
         });
     });
 
@@ -31,9 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navMenuSmall.addEventListener("click", function () {
         if (isNavbarVisible) {
-            navbarNav.style.display = "none";
+            navbarNav.classList.remove("slide-in");
+            navbarNav.classList.add("slide-out");
+            setTimeout(() => {
+                navbarNav.style.display = "none";
+                navbarNav.classList.remove("slide-out");
+            }, 300);
             isNavbarVisible = false;
         } else {
+            navbarNav.classList.remove("slide-out");
+            navbarNav.classList.add("slide-in");
             navbarNav.style.display = "block";
             isNavbarVisible = true;
         }
@@ -44,9 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     menuCheckbox.addEventListener("change", function () {
         menuToggle.classList.toggle("checked", this.checked);
         isNavbarVisible = this.checked;
-        if (!isNavbarVisible && window.innerWidth < 1300) {
-            navbarNav.style.display = "none";
-        }
     });
 
     // Disable pointer events for the label
@@ -54,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Listen for window resize event
     window.addEventListener("resize", function () {
-        if (window.innerWidth > 1300) {
+        if (window.innerWidth > 1000) {
             navbarNav.style.display = "flex";
             isNavbarVisible = true;
         } else {
@@ -62,12 +68,4 @@ document.addEventListener("DOMContentLoaded", function () {
             isNavbarVisible = false;
         }
     });
-
-    function closeAllDropdownMenus() {
-        dropdownMenus.forEach((menu) => {
-            menu.style.display = "none";
-            const parentNavItem = menu.closest(".nav-item");
-            parentNavItem.classList.remove("active");
-        });
-    }
 });
