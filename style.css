@@ -13,7 +13,7 @@
     --dark: #090909;
     --marginWeDo: 30px;
     --title-size: 6rem;
-    --second-title: 3rem;
+    --second-title: 1.6rem;
     --plane-text-size: 1.8rem;
     --small-text-size: 1.4rem;
 }
@@ -72,7 +72,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /*background: linear-gradient(black, #f00);*/
 }
 
 .petosch-products::before {
@@ -124,6 +123,10 @@ body {
     align-items: center;
     width: 100%;
     max-width: 2000px;
+}
+
+#last-we-do {
+    margin-bottom: -140px;
 }
 
 .thats-img {
@@ -182,7 +185,7 @@ body {
 .description h2 {
     margin: var(--marginWeDo);
     padding: 0;
-    font-size: var(--second-title);
+    font-size: 4rem;
 }
 
 .description p {
@@ -242,7 +245,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 500px;
+    height: 300px;
     background-color: var(--backgroundColor);
 }
 
@@ -287,13 +290,13 @@ footer {
     }
 
     .title {
-        font-size: var(--second-title);
+        font-size: 2.6rem;
         width: 90%;
+        height: 100px;
     }
 
     .we-do {
         display: flex;
-        justify-content: space-around;
         align-items: center;
         flex-direction: column;
         width: 90%;
@@ -310,6 +313,9 @@ footer {
 
     .thats-img {
         width: 90%;
+        height: 300px;
+        margin-bottom: 30px;
+        margin-top: -60px;
     }
 
     .description {
@@ -327,11 +333,18 @@ footer {
 
     .description h2 {
         margin: 30px 0 30px 0;
+        font-size: 2rem;
     }
 
     .description h4 {
         margin: 30px 0 30px 0;
         font-size: 1.2rem;
+    }
+
+    .description button {
+        margin: 10px 0 10px 0;
+        font-size: 1.2rem;
+        height: 50px;
     }
 
     .we-do .description {
@@ -340,6 +353,14 @@ footer {
 
     .we-do .thats-img {
         order: 2;
+    }
+
+    .vertical {
+        height: 100px;
+    }
+
+    .vertical-line {
+        height: 40px;
     }
 
     .footer-des h5 {
@@ -351,6 +372,6 @@ footer {
     }
 
     footer {
-        height: 300px;
+        height: 200px;
     }
 }
