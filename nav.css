@@ -75,6 +75,7 @@ li {
     pointer-events: none;
     transform: translateY(-20px);
     transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
+    padding-bottom: 10px;
 }
 
 .dropdown-menu li {
