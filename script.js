@@ -12,7 +12,7 @@ function navigateToSite(url) {
     wholeScreen.style.display = "flex";
     setTimeout(() => {
         window.location.href = url;
-    }, 600);
+    }, 900);
 }
 
 function navigateToSiteBig(url) {
@@ -22,6 +22,6 @@ function navigateToSiteBig(url) {
         wholeScreen.style.display = "flex";
         setTimeout(() => {
             window.location.href = url;
-        }, 600);
+        }, 900);
     }
 }
