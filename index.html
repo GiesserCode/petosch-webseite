@@ -15,8 +15,15 @@
 
 <body>
 
-    <nav class="navbar">
+    <div class="whole-screen" onanimationend="hideWholeScreen()">
+        <div class="animation">
+            <div class="anim-title">Petosch<br>
+                <div class="anim-title com">.com</div>
+            </div>
+        </div>
+    </div>
 
+    <nav class="navbar">
 
         <div class="house-icon">
             <lord-icon src="https://cdn.lordicon.com/gmzxduhd.json" trigger="hover"
@@ -35,9 +42,9 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Über uns</a>
+                <a class="nav-link" href="#" onclick="navigateToSiteBig('./aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Geschichte</a></li>
+                    <li><a href="#" onclick="navigateToSite('./aboutus/about.html')">Geschichte</a></li>
                     <li><a href="#">Qualitäten</a></li>
                     <li><a href="#">Mitarbeiter</a></li>
                     <li><a href="#">Standort</a></li>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="about.css">
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="../nav.js"></script>
+    <script src="about.js"></script>
+    <link rel="icon" type="image/png" href="../images/petosch_logo.png">
+    <title>Petosch</title>
+</head>
+
+<body>
+    <div class="whole-screen" onanimationend="hideWholeScreen()">
+        <div class="animation">
+            <div class="anim-title">Petosch<br>
+                <div class="anim-title com">.com</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="house-icon">
+            <lord-icon src="https://cdn.lordicon.com/gmzxduhd.json" onclick="navigateToSite('../index.html')"
+                trigger="hover" colors="primary:#ffffff,secondary:#dd3333" style="width:60px;height:60px">
+            </lord-icon>
+        </div>
+
+        <ul class="navbar-nav">
+            <li class="nav-item" id="dropdown-long">
+                <a class="nav-link" href="#">Dienstleistungen und
+                    Produkte</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Folien</a></li>
+                    <li><a href="#">Textilien</a></li>
+                    <li><a href="#">Werbung</a></li>
+                    <li><a href="#">Bestellung</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Über uns</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Geschichte</a></li>
+                    <li><a href="#">Qualitäten</a></li>
+                    <li><a href="#">Mitarbeiter</a></li>
+                    <li><a href="#">Standort</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kontakt</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Bestellung</a></li>
+                    <li><a href="#">Kontaktdaten</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav-menu-small">
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="menu-toggle">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+        </div>
+        <div class="before"></div>
+        <img src="../images/petosch_logo.png" onclick="navigateToSite('../index.html')" alt="petosch_logo">
+    </nav>
+</body>
+
+</html>
