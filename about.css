@@ -212,6 +212,12 @@ body {
 
 .mit-des p {
     font-size: var(--small-text-size);
+    text-align: center;
+}
+
+.mit-des p a {
+    color: var(--mainSecond);
+    text-decoration: none;
 }
 
 footer {
