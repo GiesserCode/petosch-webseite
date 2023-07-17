@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../nav.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="folien.css">
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="../nav.js"></script>
-    <script src="about.js"></script>
+    <script src="folien.js"></script>
     <link rel="icon" type="image/png" href="../images/petosch_logo.png">
     <title>Petosch</title>
 </head>
@@ -34,16 +34,16 @@
                 <a class="nav-link" href="#">Dienstleistungen und
                     Produkte</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="navigateToSite('../folien/folien.html')">Folien</a></li>
+                    <li><a href="#">Folien</a></li>
                     <li><a href="#">Textilien</a></li>
                     <li><a href="#">Werbung</a></li>
                     <li><a href="#">Bestellung</a></li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Über uns</a>
+                <a class="nav-link" href="#" onclick="navigateToSiteBig('../aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Mitarbeiter</a></li>
+                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Mitarbeiter</a></li>
                     <li><a href="#">Wieso Petosch?</a></li>
                     <li><a href="#">Standort</a></li>
                 </ul>
@@ -69,47 +69,41 @@
     </nav>
     <div class="maincontent">
         <div class="petosch-wel">
-            <h1>Wir machen das...</h1>
-            <p>Über uns</p>
+            <h1>Alles bis Übergrössen</h1>
+            <p>Folien</p>
         </div>
         <div class="petosch-content">
-            <div class="name-petosch">
-                <div>Wir sind</div>
-                <div><span>Pe</span>tra</div>
-                <div>und</div>
-                <div><span>T</span>h<span>o</span>mas
+            <h2>Wir machen das...</h2>
+            <div class="folien-products">
+                <div class="folien-container">
+                    <div class="folien-img">Image</div>
+                    <div class="folien-des">
+                        <h4>geplottete Folien</h4>
+                        <p>Verpassen Sie Fahrzeugen, Schildern und
+                            Bannern eine beeindruckende persönliche Note mit individuellen Schriftzügen.</p>
+                        <button>Mehr erfahren</button>
+                    </div>
                 </div>
-                <div><span>Sch</span>ädler</div>
+                <div class="folien-container">
+                    <div class="folien-img">Image</div>
+                    <div class="folien-des">
+                        <h4>bedruckte Folien</h4>
+                        <p>Mit modernster Drucktechnologie werden Folien bedruckt, um
+                            eindrucksvolle, großflächige und mehrfarbige Werbebotschaften zu realisieren.</p>
+                        <button>Mehr erfahren</button>
+                    </div>
+                </div>
+                <div class="folien-container">
+                    <div class="folien-img">Image</div>
+                    <div class="folien-des">
+                        <h4>montierte Folien</h4>
+                        <p>Verlassen Sie sich auf unser Fachwissen
+                            und lassen Sie die fachgerechte Montage der Folien in unsere erfahrenen Hände.</p>
+                        <button>Mehr erfahren</button>
+                    </div>
+                </div>
             </div>
-            <h2>Unsere Mitarbeiter</h2>
-            <div class="mitarbeiter">
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Thomas Schädler</h4>
-                        <p>+423 792 73 77<br>thomas@petosch.com</p>
-                    </div>
-                </div>
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Petra Schädler</h4>
-                        <p>+423 792 77 73<br>petra@petosch.com</p>
-                    </div>
-                </div>
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Sandro Schädler</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="standort">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.135771128343!2d9.506434676624842!3d47.076801071146164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b342155555555%3A0xa5beb11eed0f351f!2sPetosch!5e0!3m2!1sde!2sit!4v1689575721964!5m2!1sde!2sit"
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+
         </div>
         <footer>
             <div class="footer-container">

@@ -160,35 +160,12 @@ body {
     z-index: 1;
 }
 
-.name-petosch{
-    height: 400px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-}
-
-.name-petosch div span{
-    color: var(--secondColor);
-    margin-left: 20px;
-    font-family: 'title', sans-serif;
-}
-
-.name-petosch div:nth-child(3){
-    margin-left: 20px;
-}
-
-.name-petosch div:nth-child(4) span:nth-child(2){
-    margin-left: 0;
-}
-
 .petosch-content h2 {
     margin: 50px 0px 50px 0px;
     font-size: 4rem;
 }
 
-.mitarbeiter {
+.folien-products {
     max-width: 2000px;
     width: 100%;
     display: flex;
@@ -198,14 +175,14 @@ body {
     margin: 0px 0px 100px 0px;
 }
 
-.mit-container {
+.folien-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
 }
 
-.mit-img {
+.folien-img {
     height: 300px;
     width: 500px;
     background-color: var(--backgroundColor);
@@ -216,8 +193,8 @@ body {
     color: var(--mainSecond);
 }
 
-.mit-des {
-    height: 160px;
+.folien-des {
+    height: 300px;
     width: 400px;
     transform: translateY(-60px);
     background-color: var(--dark);
@@ -226,27 +203,61 @@ body {
     align-items: center;
     flex-direction: column;
     border-radius: 40px;
+    padding: 20px;
 }
 
-.mit-des h4 {
+.folien-des h4 {
     font-size: var(--plane-text-size);
-    margin: 0;
+    margin: 10px 0px 10px 0px;
     color: var(--secondColor);
 }
 
-.mit-des p {
+.folien-des p {
     font-size: var(--small-text-size);
+    text-align: center;
+    margin: 10px 0px 10px;
 }
 
-.standort{
-    width: 100%;
-    height: 500px;
-    background-color: var(--darkerBackground);
+.folien-des button {
+    height: 60px;
+    width: 260px;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: #000 10px 20px 50px;
+    padding: 0;
+    margin: 10px;
+    color: var(--mainColor);
+    z-index: 1;
+    background: var(--secondColor);
+    position: relative;
+    font-weight: bold;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
+    overflow: hidden;
+    transition: all 250ms;
 }
 
-.standort iframe{
-    width: 100%;
+.folien-des button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ddd;
+    z-index: -1;
+    transition: all 250ms
+}
+
+.folien-des button:hover::before {
+    width: 100%;
+  }
+
+.folien-des button:hover {
+    color: var(--darkerBackground);
+    width: 90%;
 }
 
 footer {
@@ -287,42 +298,40 @@ footer {
         font-size: 5rem;
         width: 90%;
         text-align: center;
+        word-wrap: break-word;
     }
 
     .petosch-content h2 {
         font-size: 4rem;
         margin: 50px 0px 50px 0px;
+        padding: 20px;
     }
 
-    .mitarbeiter{
+    .folien-products{
         margin: 0;
     }
 
-    .mit-container {
+    .folien-container {
         width: 90%;
     }
 
-    .mit-img {
-        height: 200px;
+    .folien-img {
+        height: 300px;
         width: 90%;
     }
 
-    .mit-des {
-        height: 140px;
-        width: 80%;
-        transform: translateY(-60px);
-        background-color: var(--dark);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 40px;
+    .folien-des {
+        height: min-content;
+        width: 90%; 
     }
 
-    .name-petosch{
-        width: 90%;
-        font-size: 3rem;
-        flex-direction: column;
+    .folien-des button {
+        width: 100%;
+        margin: 30px 0 30px 0;
+    }
+
+    .folien-des button:hover {
+        width: 100%;
     }
 
     .footer-des h5 {
