@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Albertus';
-    src: url('./Assets/albr55w.ttf') format('truetype');
+    src: url('../Assets/albr55w.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'title';
-    src: url('./Assets/bastss__.ttf') format('truetype');
+    src: url('../Assets/bastss__.ttf') format('truetype');
 }
 
 :root {
@@ -126,16 +126,19 @@ body {
     z-index: -1;
 }
 
-.petosch-wel img {
-    height: 40%;
+.petosch-wel h1 {
+    font-size: 8rem;
+    font-family: 'Albertus', sans-serif;
+    color: var(--secondColor);
+    margin: 0;
 }
 
-.des {
+.petosch-wel p {
+    font-size: var(--plane-text-size);
     color: var(--mainSecond);
-    font-size: 2rem;
 }
 
-.petosch-products {
+.petosch-content {
     z-index: 2;
     background-color: var(--darkerBackground);
     color: var(--mainColor);
@@ -146,7 +149,7 @@ body {
     flex-direction: column;
 }
 
-.petosch-products::before {
+.petosch-content::before {
     content: "";
     position: absolute;
     top: 0;
@@ -157,117 +160,65 @@ body {
     z-index: 1;
 }
 
-.short-des {
-    height: 60px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: var(--mainSecond);
-}
-
-.title {
-    height: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--title-size);
-}
-
-.vertical {
-    display: flex;
-    justify-content: center;
-    height: 200px;
-    align-items: center;
-}
-
-.vertical-line {
-    width: 4px;
-    height: 80px;
-    border-radius: 40px;
-    background-color: var(--mainColor);
-}
-
-.we-do {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    max-width: 2000px;
-}
-
-#last-we-do {
-    margin-bottom: -140px;
-}
-
-.thats-img {
-    width: 600px;
-    height: 400px;
-    background-color: var(--mainSecond);
-    border-radius: 40px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
-    box-shadow: #000 10px 20px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--darkerBackground);
-}
-
-#textil-img {
-    background-image: url('./images/textil.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-#folien-img {
-    background-image: url('./images/folien.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-#werbung-img {
-    background-image: url('./images/werb.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-#about-img {
-    background-image: url('./images/about.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.description {
-    width: 600px;
-}
-
-.description h4 {
-    color: var(--secondColor);
-    letter-spacing: 6px;
-    font-size: var(--second-title);
-    margin: var(--marginWeDo);
-    padding: 0;
-}
-
-.description h2 {
-    margin: var(--marginWeDo);
-    padding: 0;
+.petosch-content h2 {
+    margin: 50px 0px 50px 0px;
     font-size: 4rem;
 }
 
-.description p {
-    font-size: 1.8rem;
-    margin: var(--marginWeDo);
-    padding: 0;
+.folien-products {
+    max-width: 2000px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 0px 100px 0px;
+}
+
+.folien-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.folien-img {
+    height: 300px;
+    width: 500px;
+    background-color: var(--backgroundColor);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--mainSecond);
 }
 
-.description button {
+.folien-des {
+    height: 300px;
+    width: 400px;
+    transform: translateY(-60px);
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.folien-des h4 {
+    font-size: var(--plane-text-size);
+    margin: 10px 0px 10px 0px;
+    color: var(--secondColor);
+}
+
+.folien-des p {
+    font-size: var(--small-text-size);
+    text-align: center;
+    margin: 10px 0px 10px;
+}
+
+.folien-des button {
     height: 60px;
     width: 260px;
     font-size: 1.6rem;
@@ -276,7 +227,7 @@ body {
     border-radius: 40px;
     box-shadow: #000 10px 20px 50px;
     padding: 0;
-    margin: var(--marginWeDo);
+    margin: 10px;
     color: var(--mainColor);
     z-index: 1;
     background: var(--secondColor);
@@ -287,7 +238,7 @@ body {
     transition: all 250ms;
 }
 
-.description button::before {
+.folien-des button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -300,17 +251,13 @@ body {
     transition: all 250ms
 }
 
-.description button:hover {
-    color: var(--darkerBackground);
-    width: 60%;
-}
-
-.description button:hover::before {
+.folien-des button:hover::before {
     width: 100%;
-}
+  }
 
-.placeholder {
-    height: 200px;
+.folien-des button:hover {
+    color: var(--darkerBackground);
+    width: 90%;
 }
 
 footer {
@@ -345,95 +292,52 @@ footer {
     font-size: var(--small-text-size);
 }
 
-
 @media screen and (max-width: 1200px) {
-    .petosch-wel img {
-        width: 90%;
-        height: auto;
-    }
 
-    .des {
-        color: var(--mainSecond);
+    .petosch-wel h1 {
+        font-size: 5rem;
         width: 90%;
         text-align: center;
+        word-wrap: break-word;
     }
 
-    .short-des {
-        display: none;
+    .petosch-content h2 {
+        font-size: 4rem;
+        margin: 50px 0px 50px 0px;
+        padding: 20px;
     }
 
-    .title {
-        font-size: 2.6rem;
-        width: 90%;
-        height: 100px;
+    .folien-products{
+        margin: 0;
     }
 
-    .we-do {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+    .folien-container {
         width: 90%;
     }
 
-    .description button {
-        width: 100%;
-        margin: 30px 0 30px 0;
-    }
-
-    .description button:hover {
-        width: 100%;
-    }
-
-    .thats-img {
-        width: 90%;
+    .folien-img {
         height: 300px;
-        margin-bottom: 30px;
-        margin-top: -60px;
-    }
-
-    .description {
         width: 90%;
     }
 
-    .we-do {
-        gap: 100px;
+    .folien-des {
+        height: min-content;
+        width: 90%; 
     }
 
-    .description p {
+    .folien-des button {
+        width: 100%;
         margin: 30px 0 30px 0;
-        font-size: 1.4rem;
     }
 
-    .description h2 {
-        margin: 30px 0 30px 0;
-        font-size: 2rem;
+    .folien-des button:hover {
+        width: 100%;
     }
 
-    .description h4 {
-        margin: 30px 0 30px 0;
-        font-size: 1.2rem;
-    }
-
-    .description button {
+    .folien-des button {
         margin: 10px 0 10px 0;
         font-size: 1.2rem;
         height: 50px;
-    }
-
-    .we-do .description {
-        order: 1;
-    }
-
-    .we-do .thats-img {
-        order: 2;
-    }
-
-    .vertical {
-        height: 100px;
-    }
-
-    .vertical-line {
-        height: 40px;
     }
 
     .footer-des h5 {

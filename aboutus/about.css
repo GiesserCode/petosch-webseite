@@ -195,7 +195,6 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0px 0px 100px 0px;
 }
 
 .mit-container {
@@ -236,6 +235,8 @@ body {
 
 .mit-des p {
     font-size: var(--small-text-size);
+    color: var(--mainSecond);
+    text-align: center;
 }
 
 .standort{
@@ -247,6 +248,57 @@ body {
 .standort iframe{
     width: 100%;
     height: 100%;
+}
+
+.kontaktdaten{
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--darkerBackground);
+    padding: 50px 0px 100px 0px;
+}
+
+.kontakt-container{
+    max-width: 2000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.kontakt-image{
+    height: 300px;
+    width: 500px;
+    background-color: var(--backgroundColor);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--mainSecond);
+}
+
+.kontakt-des{
+    height: 300px;
+    width: 500px;
+}
+
+.kontakt-des h4{
+    margin: var(--marginWeDo);
+    padding: 0;
+    font-size: 4rem;
+    color: var(--secondColor);
+    word-break: break-all;
+}
+
+.kontakt-des p{
+    font-size: 1.8rem;
+    margin: var(--marginWeDo);
+    padding: 0;
+    color: var(--mainSecond);
 }
 
 footer {
@@ -288,7 +340,7 @@ footer {
         width: 90%;
         text-align: center;
     }
-
+    
     .petosch-content h2 {
         font-size: 4rem;
         margin: 50px 0px 50px 0px;
@@ -299,12 +351,24 @@ footer {
     }
 
     .mit-container {
-        width: 90%;
+        width: 100%;
     }
 
     .mit-img {
-        height: 200px;
         width: 90%;
+        height: 300px;
+    }
+
+    .kontakt-container .kontakt-des {
+        order: 1;
+    }
+
+    .kontakt-container .kontakt-image {
+        order: 2;
+    }
+
+    .kontakt-container{
+        height: min-content;
     }
 
     .mit-des {
@@ -323,6 +387,33 @@ footer {
         width: 90%;
         font-size: 3rem;
         flex-direction: column;
+    }
+
+    .kontaktdaten{
+        height: 1600px;
+    }
+
+    .kontakt-container{
+        width: 90%;
+        height: 500px;
+    }
+
+    .kontakt-image{
+        height: 300px;
+        width: 100%;
+    }
+    
+    .kontakt-des{
+        width: 100%;
+        height: 200px;
+    }
+
+    .kontakt-des h4{
+        font-size: 2rem;
+    }
+
+    .kontakt-des p{
+        font-size: 1.4rem;
     }
 
     .footer-des h5 {

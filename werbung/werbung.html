@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../nav.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="werbung.css">
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="../nav.js"></script>
-    <script src="about.js"></script>
+    <script src="js_werbung.js"></script>
     <link rel="icon" type="image/png" href="../images/petosch_logo.png">
     <title>Petosch</title>
 </head>
@@ -36,13 +36,13 @@
                 <ul class="dropdown-menu">
                     <li><a href="#" onclick="navigateToSite('../folien/folien.html')">Folien</a></li>
                     <li><a href="#" onclick="navigateToSite('../textil/textil.html')">Textilien</a></li>
-                    <li><a href="#" onclick="navigateToSite('../werbung/werbung.html')">Werbung</a></li>
+                    <li><a href="#">Werbung</a></li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Über uns</a>
+                <a class="nav-link" href="#" onclick="navigateToSiteBig('../aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Mitarbeiter</a></li>
+                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Mitarbeiter</a></li>
                     <li><a href="#">Wieso Petosch?</a></li>
                     <li><a href="#">Standort</a></li>
                 </ul>
@@ -68,70 +68,41 @@
     </nav>
     <div class="maincontent">
         <div class="petosch-wel">
-            <h1>Wir machen das...</h1>
-            <p>Über uns</p>
+            <h1>Werbung nach Mass</h1>
+            <p>Werbung</p>
         </div>
         <div class="petosch-content">
-            <div class="name-petosch">
-                <div>Wir sind</div>
-                <div><span>Pe</span>tra</div>
-                <div>und</div>
-                <div><span>T</span>h<span>o</span>mas
-                </div>
-                <div><span>Sch</span>ädler</div>
-            </div>
-            <h2>Unsere Mitarbeiter</h2>
-            <div class="mitarbeiter">
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Thomas Schädler</h4>
-                        <p>+423 792 73 77<br>thomas@petosch.com</p>
+            <h2>Wir machen das...</h2>
+            <div class="folien-products">
+                <div class="folien-container">
+                    <div class="folien-img">Image</div>
+                    <div class="folien-des">
+                        <h4>Tampondruck</h4>
+                        <p>Nutzen Sie den Tampondruck, um Feuerzeuge, Kugelschreiber und vieles mehr mit Ihrem
+                            individuellen Design zu bedrucken.</p>
+                        <button>Mehr erfahren</button>
                     </div>
                 </div>
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Petra Schädler</h4>
-                        <p>+423 792 77 73<br>petra@petosch.com</p>
+                <div class="folien-container">
+                    <div class="folien-img">Image</div>
+                    <div class="folien-des">
+                        <h4>Lasergravuren</h4>
+                        <p>Verleihen Sie Materialien wie Holz, Chrom, Acryl und mehr eine besondere Note mit unserer
+                            präzisen Gravurtechnik.</p>
+                        <button>Mehr erfahren</button>
                     </div>
                 </div>
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Sandro Schädler</h4>
+                <div class="folien-container">
+                    <div class="folien-img">Image</div>
+                    <div class="folien-des">
+                        <h4>Papierdruck</h4>
+                        <p>Wir gestalten individuelle Visitenkarten, Flyer und Poster nach Ihren Wünschen, um Ihre
+                            Botschaft kreativ zum Ausdruck zu bringen.</p>
+                        <button>Mehr erfahren</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="kontaktdaten">
-            <div class="kontakt-container">
-                <div class="kontakt-image">Image</div>
-                <div class="kontakt-des">
-                    <h4>Föhrenweg 1</h4>
-                    <p>Unsere Produktionsstätte befindet sich am Föhrenweg 1 in 9496 Balzers.</p>
-                </div>
-            </div>
-            <div class="kontakt-container">
-                <div class="kontakt-des">
-                    <h4>Bergstrasse 123</h4>
-                    <p>Unser Büro befindet sich am der Bergstrasse 123 9497 Triesenberg.</p>
-                </div>
-                <div class="kontakt-image">Image</div>
-            </div>
-            <div class="kontakt-container">
-                <div class="kontakt-image">Image</div>
-                <div class="kontakt-des">
-                    <h4>Öffnungszeiten</h4>
-                    <p>Montag - Freitag<br>9.00h - 11.45h <br>13.15h - 18.00h</p>
-                </div>
-            </div>
-        </div>
-        <div class="standort">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.135771128343!2d9.506434676624842!3d47.076801071146164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b342155555555%3A0xa5beb11eed0f351f!2sPetosch!5e0!3m2!1sde!2sit!4v1689575721964!5m2!1sde!2sit"
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+
         </div>
         <footer>
             <div class="footer-container">
