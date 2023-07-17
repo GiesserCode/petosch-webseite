@@ -334,6 +334,12 @@ footer {
         width: 100%;
     }
 
+    .folien-des button {
+        margin: 10px 0 10px 0;
+        font-size: 1.2rem;
+        height: 50px;
+    }
+
     .footer-des h5 {
         font-size: 1.1rem;
     }
