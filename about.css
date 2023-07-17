@@ -160,9 +160,28 @@ body {
     z-index: 1;
 }
 
+.name-petosch{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.name-petosch div span{
+    color: var(--secondColor);
+    margin-left: 20px;
+    font-family: 'title', sans-serif;
+}
+
+.name-petosch div:nth-child(4) span:nth-child(2){
+    margin-left: 0;
+}
+
 .petosch-content h2 {
-    margin: 50px;
-    font-size: var(--title-size);
+    margin: 100px 0px 50px 0px;
+    font-size: 4rem;
 }
 
 .mitarbeiter {
@@ -172,6 +191,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin: 0px 0px 100px 0px;
 }
 
 .mit-container {
@@ -212,12 +232,17 @@ body {
 
 .mit-des p {
     font-size: var(--small-text-size);
-    text-align: center;
 }
 
-.mit-des p a {
-    color: var(--mainSecond);
-    text-decoration: none;
+.standort{
+    width: 100%;
+    height: 500px;
+    background-color: var(--darkerBackground);
+}
+
+.standort iframe{
+    width: 100%;
+    height: 100%;
 }
 
 footer {
@@ -250,8 +275,6 @@ footer {
 
 .footer-des p {
     font-size: var(--small-text-size);
-    color: var(--mainSecond);
-    text-decoration: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -264,6 +287,11 @@ footer {
 
     .petosch-content h2 {
         font-size: 4rem;
+        margin: 50px 0px 50px 0px;
+    }
+
+    .mitarbeiter{
+        margin: 0;
     }
 
     .mit-container {
@@ -285,6 +313,12 @@ footer {
         align-items: center;
         flex-direction: column;
         border-radius: 40px;
+    }
+
+    .name-petosch{
+        width: 90%;
+        font-size: 3rem;
+        flex-direction: column;
     }
 
     .footer-des h5 {
