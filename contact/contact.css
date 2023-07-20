@@ -160,36 +160,7 @@ body {
     z-index: 1;
 }
 
-.name-petosch{
-    height: 400px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-}
-
-.name-petosch div span{
-    color: var(--secondColor);
-    margin-left: 20px;
-    font-family: 'title', sans-serif;
-}
-
-.name-petosch div:nth-child(3){
-    margin-left: 20px;
-}
-
-.name-petosch div:nth-child(4) span:nth-child(2){
-    margin-left: 0;
-}
-
-.petosch-content h2, .kontaktdaten h2 {
-    margin: 50px 0px 50px 0px;
-    font-size: 4rem;
-    color: var(--mainColor);
-}
-
-.mitarbeiter {
+.contact-data{
     max-width: 2000px;
     width: 100%;
     display: flex;
@@ -198,57 +169,111 @@ body {
     flex-wrap: wrap;
 }
 
-.mit-container {
+.call{
+    width: 540px;
+    height: 400px;
+    margin: 50px 0px 50px 0px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 20px;
-}
-
-.mit-img {
-    height: 300px;
-    width: 500px;
     background-color: var(--backgroundColor);
     border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--mainSecond);
 }
 
-.mit-des {
-    height: 160px;
-    width: 400px;
-    transform: translateY(-60px);
-    background-color: var(--dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 40px;
+#call{
+    height: 200px;
 }
 
-.mit-des h4 {
-    font-size: var(--plane-text-size);
-    margin: 0;
-    color: var(--secondColor);
+.kontaktdaten h2{
+    margin: 50px 0px 50px 0px;
+    font-size: 4rem;
+    color: var(--mainColor);
 }
 
-.mit-des p {
-    font-size: var(--small-text-size);
-    color: var(--mainSecond);
+.call h2{
+    font-size: 3rem;
     text-align: center;
+    margin: 0;
 }
 
-.standort{
+.call button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 60px;
+    width: 280px;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: #000 10px 20px 50px;
+    padding: 0;
+    margin: 20px;
+    color: var(--mainColor);
+    z-index: 1;
+    background: var(--secondColor);
+    position: relative;
+    font-weight: bold;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
+    overflow: hidden;
+    transition: all 250ms;
+}
+
+.call button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ddd;
+    z-index: -1;
+    transition: all 250ms
+}
+
+.call button:hover {
+    color: var(--darkerBackground);
+    width: 80%;
+}
+
+#petosch-phone, #thomas-phone, #thomas-mail{
+    --lord-icon-primary: #fff;
+    transition: all 250ms;
+}
+
+#first-button:hover #petosch-phone, 
+#second-button:hover #thomas-phone,
+#third-button:hover #thomas-mail,
+#fourth-button:hover #petra-phone,
+#fift-button:hover #petra-mail{
+    --lord-icon-primary: #000;
+}
+
+.call button:hover::before {
     width: 100%;
-    height: 500px;
+}
+
+.vertical {
     background-color: var(--darkerBackground);
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+}
+
+.vertical-line {
+    width: 4px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: var(--mainColor);
 }
 
 .standort iframe{
     width: 100%;
-    height: 100%;
+    height: 400px;
 }
 
 .kontaktdaten{
@@ -303,20 +328,6 @@ body {
     color: var(--mainSecond);
 }
 
-.vertical {
-    display: flex;
-    justify-content: center;
-    height: 200px;
-    align-items: center;
-}
-
-.vertical-line {
-    width: 4px;
-    height: 80px;
-    border-radius: 40px;
-    background-color: var(--mainColor);
-}
-
 footer {
     z-index: 5;
     display: flex;
@@ -363,47 +374,19 @@ footer {
         width: 90%;
     }
 
-    .mitarbeiter{
-        margin: 0;
-    }
-
-    .mit-container {
-        width: 100%;
-    }
-
-    .mit-img {
+    .call{
         width: 90%;
-        height: 300px;
-    }
-
-    .kontakt-container .kontakt-des {
-        order: 1;
-    }
-
-    .kontakt-container .kontakt-image {
-        order: 2;
-    }
-
-    .kontakt-container{
         height: min-content;
+        padding-bottom: 30px;
     }
 
-    .mit-des {
-        height: 140px;
-        width: 80%;
-        transform: translateY(-60px);
-        background-color: var(--dark);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 40px;
+    .call h2{
+        font-size: 2rem;
+        margin: 30px;
     }
 
-    .name-petosch{
-        width: 90%;
-        font-size: 3rem;
-        flex-direction: column;
+    .call button{
+        margin: 10px;
     }
 
     .kontakt-container{

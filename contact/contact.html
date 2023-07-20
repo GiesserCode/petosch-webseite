@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../nav.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="contact.css">
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="../nav.js"></script>
-    <script src="about.js"></script>
+    <script src="contact.js"></script>
     <link rel="icon" type="image/png" href="../images/petosch_logo.png">
     <title>Petosch</title>
 </head>
@@ -40,11 +40,11 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Über uns</a>
+                <a class="nav-link" href="#" onclick="navigateToSite('../aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Mitarbeiter</a></li>
-                    <li><a href="#">Wieso Petosch?</a></li>
-                    <li><a href="#">Standort</a></li>
+                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Mitarbeiter</a></li>
+                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Wieso Petosch?</a></li>
+                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Standort</a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -68,41 +68,61 @@
     </nav>
     <div class="maincontent">
         <div class="petosch-wel">
-            <h1>Wir machen das...</h1>
-            <p>Über uns</p>
+            <h1>Haben Sie Fragen?</h1>
+            <p>Kontakt</p>
         </div>
         <div class="petosch-content">
-            <div class="name-petosch">
-                <div>Wir sind</div>
-                <div><span>Pe</span>tra</div>
-                <div>und</div>
-                <div><span>T</span>h<span>o</span>mas
-                </div>
-                <div><span>Sch</span>ädler</div>
-            </div>
-            <h2>Unsere Mitarbeiter</h2>
-            <div class="mitarbeiter">
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Thomas Schädler</h4>
-                        <p>+423 792 73 77<br>thomas@petosch.com</p>
-                    </div>
-                </div>
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Petra Schädler</h4>
-                        <p>+423 792 77 73<br>petra@petosch.com</p>
-                    </div>
-                </div>
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Sandro Schädler</h4>
-                    </div>
+            <div class="contact-data">
+                <div class="call" id="call">
+                    <h2>Rufen sie uns an</h2>
+                    <button id="first-button" onclick="callPhoneNumber('+4233840777')">
+                        <lord-icon class="icon" id="petosch-phone" src="https://cdn.lordicon.com/ssvybplt.json"
+                            trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
+                        </lord-icon>
+                        +4233840777
+                    </button>
                 </div>
             </div>
+            <div class="vertical">
+                <div class="vertical-line"></div>
+            </div>
+            <div class="contact-data">
+                <div class="call">
+                    <h2>Thomas Schädler</h2>
+                    <button id="second-button" onclick="callPhoneNumber('+4237927377')">
+                        <lord-icon class="icon" id="thomas-phone" src="https://cdn.lordicon.com/ssvybplt.json"
+                            trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
+                        </lord-icon>
+                        +4233840777
+                    </button>
+                    <button id="third-button"
+                        onclick="sendEmail('thomas@schädler.com', 'Frage', 'Hallo, ich habe eine Frage')">
+                        <lord-icon id="thomas-mail" src="https://cdn.lordicon.com/diihvcfp.json" trigger="hover"
+                            colors="primary:#ffffff" style="width:40px;height:40px">
+                        </lord-icon>
+                        Mail
+                    </button>
+                </div>
+                <div class="call">
+                    <h2>Petra Schädler</h2>
+                    <button id="fourth-button" onclick="callPhoneNumber('+4237927773')">
+                        <lord-icon id="petra-phone" class="icon" src="https://cdn.lordicon.com/ssvybplt.json"
+                            trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
+                        </lord-icon>
+                        +4233840777
+                    </button>
+                    <button id="fift-button"
+                        onclick="sendEmail('petra@schädler.com', 'Frage', 'Hallo, ich habe eine Frage')">
+                        <lord-icon id="petra-mail" src="https://cdn.lordicon.com/diihvcfp.json" trigger="hover"
+                            colors="primary:#ffffff" style="width:40px;height:40px">
+                        </lord-icon>
+                        Mail
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="vertical">
+            <div class="vertical-line"></div>
         </div>
         <div class="kontaktdaten">
             <h2>Kontaktdaten</h2>

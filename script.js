@@ -10,6 +10,7 @@ function navigateToSite(url) {
     const wholeScreen = document.querySelector(".whole-screen");
     wholeScreen.style.animationDirection = "reverse";
     wholeScreen.style.display = "flex";
+    wholeScreen.classList.add("hide-on-animationend");
     setTimeout(() => {
         window.location.href = url;
     }, 900);
@@ -20,8 +21,10 @@ function navigateToSiteBig(url) {
         const wholeScreen = document.querySelector(".whole-screen");
         wholeScreen.style.animationDirection = "reverse";
         wholeScreen.style.display = "flex";
+        wholeScreen.classList.add("hide-on-animationend");
         setTimeout(() => {
             window.location.href = url;
         }, 900);
     }
 }
+x
