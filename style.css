@@ -17,10 +17,20 @@
     --navHeight: 80px;
     --dark: #090909;
     --marginWeDo: 30px;
-    --title-size: 6rem;
-    --second-title: 1.6rem;
+    --title: 8rem;
+    --h-one: 6rem;
+    --h-two: 4rem;
+    --h-three: 2rem;
+    --h-four: 1.6rem;
+    --media-h-one: 5rem;
+    --media-h-two: 3rem;
+    --media-h-three: 2rem;
+    --media-h-four: 1.2rem;
     --plane-text-size: 1.8rem;
     --small-text-size: 1.4rem;
+    --footer-h-five: 1.1rem;
+    --footer-p: .7rem;
+    --max-width: 2000px;
 }
 
 ::selection {
@@ -91,7 +101,7 @@ body {
 
 .anim-title {
     font-family: 'title', sans-serif;
-    font-size: var(--title-size);
+    font-size: var(--h-one);
     color: var(--secondColor);
 }
 
@@ -132,7 +142,7 @@ body {
 
 .des {
     color: var(--mainSecond);
-    font-size: 2rem;
+    font-size: var(--h-three);
 }
 
 .petosch-products {
@@ -172,7 +182,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: var(--title-size);
+    font-size: var(--h-one);
 }
 
 .vertical {
@@ -194,7 +204,7 @@ body {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    max-width: 2000px;
+    max-width: var(--max-width);
 }
 
 #last-we-do {
@@ -249,7 +259,7 @@ body {
 .description h4 {
     color: var(--secondColor);
     letter-spacing: 6px;
-    font-size: var(--second-title);
+    font-size: var(--h-four);
     margin: var(--marginWeDo);
     padding: 0;
 }
@@ -257,11 +267,11 @@ body {
 .description h2 {
     margin: var(--marginWeDo);
     padding: 0;
-    font-size: 4rem;
+    font-size: var(--h-two);
 }
 
 .description p {
-    font-size: 1.8rem;
+    font-size: var(--plane-text-size);
     margin: var(--marginWeDo);
     padding: 0;
     color: var(--mainSecond);
@@ -270,7 +280,7 @@ body {
 .description button {
     height: 60px;
     width: 260px;
-    font-size: 1.6rem;
+    font-size: var(--h-four);
     border: none;
     outline: none;
     border-radius: 40px;
@@ -363,9 +373,9 @@ footer {
     }
 
     .title {
-        font-size: 2.6rem;
+        font-size: var(--media-h-two);
         width: 90%;
-        height: 100px;
+        height: 140px;
     }
 
     .we-do {
@@ -401,22 +411,22 @@ footer {
 
     .description p {
         margin: 30px 0 30px 0;
-        font-size: 1.4rem;
+        font-size: var(--small-text-size);
     }
 
     .description h2 {
         margin: 30px 0 30px 0;
-        font-size: 2rem;
+        font-size: var(--media-h-three);
     }
 
     .description h4 {
         margin: 30px 0 30px 0;
-        font-size: 1.2rem;
+        font-size: var(--media-h-four);
     }
 
     .description button {
         margin: 10px 0 10px 0;
-        font-size: 1.2rem;
+        font-size: var(--media-h-four);
         height: 50px;
     }
 
@@ -437,11 +447,11 @@ footer {
     }
 
     .footer-des h5 {
-        font-size: 1.1rem;
+        font-size: var(--footer-h-five);
     }
 
     .footer-des p {
-        font-size: .7rem;
+        font-size: var(--footer-p);
     }
 
     footer {
