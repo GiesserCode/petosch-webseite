@@ -432,9 +432,13 @@ footer {
         width: 90%;
     }
 
+    .contact-data{
+        gap: 20px;
+    }
+
     .call{
         width: 90%;
-        height: min-content;
+        height: var(--media-box-height);
         padding-bottom: 30px;
     }
 
