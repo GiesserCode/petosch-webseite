@@ -54,6 +54,7 @@ li {
     color: white;
     position: relative;
     transition: color 250ms ease-in-out;
+    outline: none;
 }
 
 .nav-link:hover {
@@ -73,6 +74,7 @@ li {
     border-radius: 0px 0px 10px 10px;
     opacity: 0;
     pointer-events: none;
+    outline: none;
     transform: translateY(-20px);
     transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
     padding-bottom: 10px;

@@ -16,7 +16,6 @@
     --secondColor: #d33;
     --navHeight: 80px;
     --dark: #090909;
-    --marginWeDo: 30px;
     --title: 8rem;
     --h-one: 6rem;
     --h-two: 4rem;
@@ -31,6 +30,13 @@
     --footer-h-five: 1.1rem;
     --footer-p: .7rem;
     --max-width: 2000px;
+    --margin: 50px 0px 50px 0px;
+    --box-height: 400px;
+    --media-box-height: 300px;
+    --box-width: 600px;
+    --flex-height: 300px;
+    --flex-width: 500px;
+    --radius: 40px;
 }
 
 ::selection {
@@ -173,6 +179,7 @@ body {
 .contact-data{
     max-width: var(--max-width);
     width: 100%;
+    margin: var(--margin);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -180,12 +187,11 @@ body {
 }
 
 .call{
-    width: 540px;
-    height: 400px;
-    margin: 50px 0px 50px 0px;
+    width: var(--flex-width);
+    height: var(--flex-height);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: var(--backgroundColor);
     border-radius: 40px;
@@ -196,7 +202,7 @@ body {
 }
 
 .kontaktdaten h2{
-    margin: 50px 0px 50px 0px;
+    margin: 0;
     font-size: var(--h-one);
     color: var(--mainColor);
 }
@@ -220,7 +226,6 @@ body {
     border-radius: 40px;
     box-shadow: #000 10px 20px 50px;
     padding: 0;
-    margin: 20px;
     color: var(--mainColor);
     z-index: 1;
     background: var(--secondColor);
@@ -270,7 +275,6 @@ body {
     background-color: var(--darkerBackground);
     display: flex;
     justify-content: center;
-    height: 200px;
     align-items: center;
 }
 
@@ -283,7 +287,7 @@ body {
 
 .standort iframe{
     width: 100%;
-    height: 400px;
+    height: var(--box-height)
 }
 
 .kontaktdaten{
@@ -294,12 +298,12 @@ body {
     justify-content: space-around;
     align-items: center;
     background-color: var(--darkerBackground);
-    padding: 50px 0px 100px 0px;
+    padding: var(--margin);
 }
 
 .kontakt-container{
     max-width: var(--max-width);
-    margin: 50px 0px 50px 0px;
+    margin: var(--margin);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -308,10 +312,10 @@ body {
 }
 
 .kontakt-image{
-    height: 300px;
-    width: 500px;
+    height: var(--box-height);
+    width: var(--box-width);
     background-color: var(--backgroundColor);
-    border-radius: 40px;
+    border-radius: var(--radius);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,12 +323,15 @@ body {
 }
 
 .kontakt-des{
-    height: 300px;
-    width: 500px;
+    height: var(--box-height);
+    width: var(--box-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .kontakt-des h4{
-    margin: var(--marginWeDo);
+    margin: 0;
     padding: 0;
     font-size: var(--h-two);
     color: var(--secondColor);
@@ -333,9 +340,51 @@ body {
 
 .kontakt-des p{
     font-size: var(--plane-text-size);
-    margin: var(--marginWeDo);
+    margin: 0;
     padding: 0;
     color: var(--mainSecond);
+}
+
+.kontakt-des button {
+    height: 60px;
+    width: 260px;
+    font-size: var(--h-four);
+    border: none;
+    outline: none;
+    border-radius: var(--radius);
+    box-shadow: #000 10px 20px 50px;
+    padding: 0;
+    margin: var(--marginWeDo);
+    color: var(--mainColor);
+    z-index: 1;
+    background: var(--secondColor);
+    position: relative;
+    font-weight: bold;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
+    overflow: hidden;
+    transition: all 250ms;
+}
+
+.kontakt-des button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ddd;
+    z-index: -1;
+    transition: all 250ms
+}
+
+.kontakt-des button:hover {
+    color: var(--darkerBackground);
+    width: 60%;
+}
+
+.kontakt-des button:hover::before {
+    width: 100%;
 }
 
 footer {
@@ -380,7 +429,6 @@ footer {
     
     .petosch-content h2, .kontaktdaten h2{
         font-size: var(--media-h-two);
-        margin: 50px 0px 50px 0px;
         width: 90%;
     }
 
@@ -392,11 +440,6 @@ footer {
 
     .call h2{
         font-size: var(--media-h-three);
-        margin: 30px;
-    }
-
-    .call button{
-        margin: 10px;
     }
 
     .kontakt-container{
@@ -413,7 +456,6 @@ footer {
     .kontakt-des{
         width: 100%;
         height: 200px;
-        margin-bottom: 50px;
         order: 1;
     }
 
