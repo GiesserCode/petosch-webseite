@@ -285,9 +285,10 @@ body {
     background-color: var(--mainColor);
 }
 
-.standort iframe{
+iframe{
     width: 100%;
-    height: var(--box-height)
+    height: 100%;
+    border-radius: var(--radius);
 }
 
 .kontaktdaten{
