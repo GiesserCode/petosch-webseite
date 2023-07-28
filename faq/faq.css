@@ -125,7 +125,7 @@ body {
     top: 0;
     left: 0;
     background-color: var(--darkerBackground);
-    overflow: auto;
+    overflow-x: hidden;
     animation: start-main 1s;
 }
 
@@ -150,7 +150,7 @@ body {
 }
 
 .petosch-wel p {
-    font-size: var(--plane-text-size);
+    font-size: var(--h-three);
     color: var(--mainSecond);
 }
 
@@ -176,103 +176,92 @@ body {
     z-index: 1;
 }
 
-.petosch-content h2 {
+.lines{
     margin: var(--margin);
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lines h2{
+    margin: 0;
     font-size: var(--h-one);
 }
 
-.folien-products {
-    max-width: var(--max-width);
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+.lines-container{
     margin: var(--margin);
-}
-
-.folien-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.folien-img {
-    height: var(--flex-height);
-    width: var(--flex-width);
-    background-color: var(--backgroundColor);
-    border-radius: var(--radius);
+.line-div{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--mainSecond);
+    margin: 10px;
 }
 
-.folien-des {
-    height: var(--flex-height);
-    width: calc(var(--flex-width)/5*4);
-    transform: translateY(-60px);
-    background-color: var(--dark);
-    display: flex;
-    justify-content: space-evenly   ;
-    align-items: center;
-    flex-direction: column;
-    border-radius: var(--radius);
-    padding: 20px;
-}
-
-.folien-des h4 {
-    font-size: var(--plane-text-size);
-    margin: 0;
-    color: var(--secondColor);
-}
-
-.folien-des p {
-    font-size: var(--small-text-size);
-    text-align: center;
-    margin: 0;
-}
-
-.folien-des button {
-    cursor: pointer;;
-    height: 60px;
-    width: 260px;
-    font-size: var(--h-four);
-    border: none;
-    outline: none;
-    border-radius: var(--radius);
-    box-shadow: #000 10px 20px 50px;
-    padding: 0;
-    color: var(--mainColor);
-    z-index: 1;
-    background: var(--secondColor);
-    position: relative;
-    font-weight: bold;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
-    overflow: hidden;
-    transition: all 250ms;
-}
-
-.folien-des button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    border-radius: 15px;
-    background-color: #ddd;
-    z-index: -1;
-    transition: all 250ms
-}
-
-.folien-des button:hover::before {
-    width: 100%;
-  }
-
-.folien-des button:hover {
-    color: var(--darkerBackground);
+.line-flex{
     width: 90%;
+    background-color: var(--backgroundColor);
+    border-radius: var(--radius);
+    font-size: var(--plane-text-size);
+    cursor: pointer;
+}
+
+.line-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-line p{
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.line-dropdown{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--plane-text-size);
+}
+
+.line-dropdown p{
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes arrowspin{
+    0%{
+        rotate: 180deg;
+    }
+
+    100%{
+        rotate: 0deg;
+    }
+}
+
+.dropdown-arrow {
+    margin: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid var(--mainColor);
+    rotate: 180deg;
+    position: absolute;
+    right: 5%;
+    transition: rotate 0.3s;
 }
 
 footer {
@@ -313,43 +302,11 @@ footer {
         font-size: var(--media-h-one);
         width: 90%;
         text-align: center;
-        word-wrap: break-word;
     }
 
-    .petosch-content h2 {
+    .lines h2{
         font-size: var(--media-h-two);
-        margin: var(--margin);
-    }
-
-    .folien-products{
-        margin: 0;
-    }
-
-    .folien-container {
-        width: 100%;
-    }
-
-    .folien-img {
-        height: 300px;
         width: 90%;
-    }
-
-    .folien-des {
-        height: var(--media-box-height);
-        width: 80%; 
-    }
-
-    .folien-des button {
-        width: 100%;
-    }
-
-    .folien-des button:hover {
-        width: 100%;
-    }
-
-    .folien-des button {
-        font-size: var(--media-h-four);
-        height: 50px;
     }
 
     .footer-des h5 {

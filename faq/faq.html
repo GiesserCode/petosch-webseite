@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../nav.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="faq.css">
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="../nav.js"></script>
-    <script src="about.js"></script>
+    <script src="faq.js"></script>
     <link rel="icon" type="image/png" href="../images/petosch_logo.png">
     <title>Petosch</title>
 </head>
@@ -40,7 +40,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="navigateToSiteBig('../aboutus/about.html')">Über uns</a>
+                <a class="nav-link" href="#" onclick="navigateToSite('../aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
                     <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Team</a></li>
                     <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Standort</a></li>
@@ -67,82 +67,35 @@
     </nav>
     <div class="maincontent">
         <div class="petosch-wel">
-            <h1>Wir machen das...</h1>
-            <p>Über uns</p>
+            <h1>Haben Sie Fragen?</h1>
+            <p>FAQ</p>
         </div>
         <div class="petosch-content">
-            <div class="name-petosch">
-                <div>Wir sind</div>
-                <div><span>Pe</span>tra</div>
-                <div>und</div>
-                <div><span>T</span>h<span>o</span>mas
-                </div>
-                <div><span>Sch</span>ädler</div>
-            </div>
-            <h2>Team</h2>
-            <div class="mitarbeiter">
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Thomas Schädler</h4>
-                        <p>+423 792 73 77<br>thomas@petosch.com</p>
+            <div class="lines">
+                <h2>Häufig gestellte Fragen</h2>
+                <div class="lines-container">
+                    <div class="line-div" onclick="toggleDropdown(this)">
+                        <div class="line-flex">
+                            <div class="line-line">
+                                <p>Das ist eine Frage</p>
+                                <div class="dropdown-arrow"></div>
+                            </div>
+                            <div class="line-dropdown">
+                                <p>Das hier ist die Antwort</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Petra Schädler</h4>
-                        <p>+423 792 77 73<br>petra@petosch.com</p>
+                    <div class="line-div" onclick="toggleDropdown(this)">
+                        <div class="line-flex">
+                            <div class="line-line">
+                                <p>Das ist eine Frage</p>
+                                <div class="dropdown-arrow"></div>
+                            </div>
+                            <div class="line-dropdown">
+                                <p>Das hier ist die Antwort</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="mit-container">
-                    <div class="mit-img">Image</div>
-                    <div class="mit-des">
-                        <h4>Sandro Schädler</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="kontaktdaten">
-            <h2>Kontaktdaten</h2>
-            <div class="kontakt-container">
-                <div class="kontakt-image">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.135771128343!2d9.506434676624842!3d47.076801071146164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b342155555555%3A0xa5beb11eed0f351f!2sPetosch!5e0!3m2!1sde!2sit!4v1689575721964!5m2!1sde!2sit"
-                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                <div class="kontakt-des">
-                    <h4>Produktion</h4>
-                    <p>Unsere Produktionsstätte befindet sich am Föhrenweg 1 <br> in 9496 Balzers.</p>
-                    <button>Adresse kopieren</button>
-                </div>
-            </div>
-            <div class="vertical">
-                <div class="vertical-line"></div>
-            </div>
-            <div class="kontakt-container">
-                <div class="kontakt-des">
-                    <h4>Büro</h4>
-                    <p>Unser Büro befindet sich an der Bergstrasse 123<br>9497 Triesenberg.</p>
-                    <button>Adresse kopieren</button>
-                </div>
-                <div class="kontakt-image">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.231711168134!2d9.549582299999999!3d47.11413030000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b3412031572e7%3A0x34b30aa695c30b28!2sBergstrasse%20123%2C%209497%20Triesenberg%2C%20Liechtenstein!5e0!3m2!1sde!2sit!4v1690353175545!5m2!1sde!2sit"
-                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-            <div class="vertical">
-                <div class="vertical-line"></div>
-            </div>
-            <div class="kontakt-container">
-                <div class="kontakt-image">Image</div>
-                <div class="kontakt-des">
-                    <h4>Öffnungszeiten</h4>
-                    <p>Montag - Freitag<br>9.00h - 11.45h <br>13.15h - 18.00h</p>
-                    <button>Kalender öffnen</button>
                 </div>
             </div>
         </div>
@@ -167,5 +120,3 @@
         </footer>
     </div>
 </body>
-
-</html>

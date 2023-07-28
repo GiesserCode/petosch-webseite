@@ -320,6 +320,7 @@ iframe{
 }
 
 .kontakt-des button {
+    cursor: pointer;
     height: 60px;
     width: 260px;
     font-size: var(--h-four);
@@ -474,6 +475,7 @@ footer {
     }
 
     .kontakt-des button {
+        cursor: pointer;
         width: 100%;
         margin: 0;
     }
