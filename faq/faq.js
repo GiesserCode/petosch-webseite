@@ -44,11 +44,11 @@ function toggleDropdown(clickedDiv) {
     var dropdown = clickedDiv.querySelector('.line-dropdown');
     var arrow = clickedDiv.querySelector('.dropdown-arrow');
 
-    if (dropdown.style.display === 'none') {
-        dropdown.style.display = 'flex';
-        arrow.style.rotate = '0deg';
-    } else {
+    if (dropdown.style.display === 'flex') { // Change this to check for 'flex'
         dropdown.style.display = 'none';
-        arrow.style.rotate = '180deg';
+        arrow.style.transform = 'rotate(0deg)'; // Use transform instead of rotate
+    } else {
+        dropdown.style.display = 'flex';
+        arrow.style.transform = 'rotate(180deg)'; // Use transform instead of rotate
     }
 }

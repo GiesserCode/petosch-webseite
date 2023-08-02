@@ -28,6 +28,13 @@ li {
     z-index: 3;
 }
 
+#red {
+    color: var(--secondColor);
+}
+
+#red:hover {
+    color: var(--mainColor);
+}
 
 .house-icon {
     padding: 10px;

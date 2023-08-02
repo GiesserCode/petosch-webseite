@@ -92,8 +92,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    background-color: var(--backgroundColor);
+    z-index: 3;
+    background-color: var(--darkerBackground);
     animation: start 1s;
     overflow: hidden;
 }
@@ -134,7 +134,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 74vh;
+    min-height: 600px;
     width: 100%;
     position: sticky;
     top: 0;
@@ -212,6 +213,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: var(--max-width);
+    gap: 20px;
 }
 
 .thats-img {
@@ -261,15 +263,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-
-.description h4 {
-    color: var(--secondColor);
-    letter-spacing: 6px;
-    font-size: var(--h-four);
-    margin: var(--marginWeDo);
-    padding: 0;
-    margin: 0;
 }
 
 .description h2 {
@@ -330,6 +323,10 @@ body {
     height: 200px;
 }
 
+#last-we-do {
+    margin-bottom: -140px;
+}
+
 footer {
     z-index: 5;
     display: flex;
@@ -364,9 +361,12 @@ footer {
 
 
 @media screen and (max-width: 1200px) {
+    .whole-screen {
+        z-index: 10;
+    }
+
     .petosch-wel img {
-        width: 90%;
-        height: auto;
+        height: 30%;
     }
 
     .des {
@@ -382,7 +382,6 @@ footer {
     .title {
         font-size: var(--media-h-two);
         width: 90%;
-        height: 140px;
     }
 
     .we-do {
@@ -424,11 +423,6 @@ footer {
         font-size: var(--media-h-three);
     }
 
-    .description h4 {
-        margin: 0;
-        font-size: var(--media-h-four);
-    }
-
     .description button {
         margin: 0;
         font-size: var(--media-h-four);
@@ -443,16 +437,8 @@ footer {
         order: 2;
     }
 
-    .vertical {
-        height: 100px;
-    }
-
     .vertical-line {
         height: 40px;
-    }
-
-    #last-we-do {
-        margin-bottom: -140px;
     }
 
     .footer-des h5 {

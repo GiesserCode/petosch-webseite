@@ -27,3 +27,15 @@ function navigateToSiteBig(url) {
         }, 900);
     }
 }
+
+function sendEmail(mail, title, des) {
+    const recipientEmail = mail; // Replace with the recipient's email address
+    const subject = title; // Replace with the subject of your email
+    const body = des; // Replace with the body of your email
+
+    // Create the mailto link
+    const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open the default email client with the pre-filled email
+    window.location.href = mailtoLink;
+}

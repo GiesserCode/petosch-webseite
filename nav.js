@@ -3,24 +3,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-link");
     const dropdownMenus = document.querySelectorAll(".dropdown-menu");
 
+    // Function to hide all dropdown menus
+    function hideAllDropdownMenus() {
+        dropdownMenus.forEach((menu) => {
+            menu.style.display = "none";
+            menu.classList.remove("slide-in");
+        });
+        navItems.forEach((item) => {
+            item.classList.remove("active");
+        });
+    }
+
     navItems.forEach((item) => {
         item.addEventListener("click", function () {
             const isActive = this.classList.contains("active");
             if (isActive) {
-                this.classList.remove("active");
-                const dropdownMenu = this.querySelector(".dropdown-menu");
-                dropdownMenu.classList.remove("slide-in");
-                dropdownMenu.classList.add("slide-out");
-                setTimeout(() => {
-                    dropdownMenu.style.display = "none";
-                    dropdownMenu.classList.remove("slide-out");
-                }, 300);
+                hideAllDropdownMenus();
             } else {
+                hideAllDropdownMenus();
                 this.classList.add("active");
                 const dropdownMenu = this.querySelector(".dropdown-menu");
-                dropdownMenu.classList.remove("slide-out");
-                dropdownMenu.classList.add("slide-in");
                 dropdownMenu.style.display = "flex";
+                dropdownMenu.classList.add("slide-in");
             }
         });
     });
@@ -38,12 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 navbarNav.style.display = "none";
                 navbarNav.classList.remove("slide-out");
+                hideAllDropdownMenus(); // Hide dropdown menus when navbar is closed
             }, 300);
             isNavbarVisible = false;
         } else {
             navbarNav.classList.remove("slide-out");
             navbarNav.classList.add("slide-in");
             navbarNav.style.display = "block";
+            hideAllDropdownMenus(); // Hide dropdown menus when navbar is opened
             isNavbarVisible = true;
         }
         menuCheckbox.checked = isNavbarVisible;
@@ -53,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
     menuCheckbox.addEventListener("change", function () {
         menuToggle.classList.toggle("checked", this.checked);
         isNavbarVisible = this.checked;
+        if (!isNavbarVisible) {
+            hideAllDropdownMenus(); // Hide dropdown menus when navbar is closed by unchecking checkbox
+        }
     });
 
     // Disable pointer events for the label
@@ -66,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             navbarNav.style.display = "none";
             isNavbarVisible = false;
+            hideAllDropdownMenus(); // Hide dropdown menus when screen is less than 1200px
         }
     });
 });

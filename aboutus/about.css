@@ -92,8 +92,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    background-color: var(--backgroundColor);
+    z-index: 3;
+    background-color: var(--darkerBackground);
     animation: start 1s;
     overflow: hidden;
 }
@@ -129,32 +129,9 @@ body {
     animation: start-main 1s;
 }
 
-.petosch-wel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background-color: var(--darkerBackground);
-    z-index: -1;
-}
-
-.petosch-wel h1 {
-    font-size: var(--title);
-    font-family: 'Albertus', sans-serif;
-    color: var(--secondColor);
-    margin: 0;
-}
-
-.petosch-wel p {
-    font-size: var(--h-three);
-    color: var(--mainSecond);
-}
-
 .petosch-content {
+    min-height: calc(100vh - 300px);
+    margin-top: 80px;
     z-index: 2;
     background-color: var(--darkerBackground);
     color: var(--mainColor);
@@ -176,7 +153,7 @@ body {
     z-index: 1;
 }
 
-.name-petosch{
+.name-petosch {
     height: min-content;
     margin: var(--margin);
     width: 100%;
@@ -186,22 +163,22 @@ body {
     font-size: var(--h-two);
 }
 
-.name-petosch div span{
+.name-petosch div span {
     color: var(--secondColor);
     margin-left: 20px;
     font-family: 'title', sans-serif;
 }
 
-.name-petosch div:nth-child(3){
+.name-petosch div:nth-child(3) {
     margin-left: 20px;
 }
 
-.name-petosch div:nth-child(4) span:nth-child(2){
+.name-petosch div:nth-child(4) span:nth-child(2) {
     margin-left: 0;
 }
 
-.petosch-content h2, .kontaktdaten h2 {
-    margin: 0;
+.mit-title,
+.kontaktdaten h2 {
     font-size: var(--h-one);
     color: var(--mainColor);
 }
@@ -213,7 +190,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin: var(--margin);
+    gap: 20px;
 }
 
 .mit-container {
@@ -234,7 +211,7 @@ body {
 }
 
 .mit-des {
-    height: calc(var(--flex-height)/2);
+    height: var(--flex-height);
     width: calc(var(--flex-width)/5*4);
     transform: translateY(-60px);
     background-color: var(--dark);
@@ -243,6 +220,75 @@ body {
     align-items: center;
     flex-direction: column;
     border-radius: var(--radius);
+}
+
+.mit-des button,
+#first-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 60px;
+    width: 300px;
+    font-size: var(--h-four);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: #000 10px 20px 50px;
+    padding: 0;
+    color: var(--mainColor);
+    z-index: 1;
+    background: var(--secondColor);
+    position: relative;
+    font-weight: bold;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
+    overflow: hidden;
+    transition: all 250ms;
+}
+
+.mit-des button::before,
+#first-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ddd;
+    z-index: -1;
+    transition: all 250ms
+}
+
+.mit-des button:hover {
+    color: var(--darkerBackground);
+    width: 80%;
+}
+
+#first-button:hover {
+    color: var(--darkerBackground);
+    width: 60%;
+}
+
+#petosch-phone,
+#thomas-phone,
+#thomas-mail {
+    --lord-icon-primary: #fff;
+    transition: all 250ms;
+}
+
+#first-button:hover #petosch-phone,
+#second-button:hover #thomas-phone,
+#third-button:hover #thomas-mail,
+#fourth-button:hover #petra-phone,
+#fift-button:hover #petra-mail {
+    --lord-icon-primary: #000;
+}
+
+.mit-des button:hover::before,
+#first-button:hover::before {
+    width: 100%;
 }
 
 .mit-des h4 {
@@ -258,13 +304,13 @@ body {
     margin: 0;
 }
 
-iframe{
+iframe {
     width: 100%;
     height: 100%;
     border-radius: var(--radius);
 }
 
-.kontaktdaten{
+.kontaktdaten {
     width: 100%;
     height: min-content;
     display: flex;
@@ -275,7 +321,7 @@ iframe{
     padding: var(--margin);
 }
 
-.kontakt-container{
+.kontakt-container {
     max-width: var(--max-width);
     margin: var(--margin);
     display: flex;
@@ -285,7 +331,7 @@ iframe{
     flex-wrap: wrap;
 }
 
-.kontakt-image{
+.kontakt-image {
     height: var(--box-height);
     width: var(--box-width);
     background-color: var(--backgroundColor);
@@ -296,7 +342,7 @@ iframe{
     color: var(--mainSecond);
 }
 
-.kontakt-des{
+.kontakt-des {
     height: var(--box-height);
     width: var(--box-width);
     display: flex;
@@ -304,7 +350,7 @@ iframe{
     justify-content: space-around;
 }
 
-.kontakt-des h4{
+.kontakt-des h4 {
     margin: 0;
     padding: 0;
     font-size: var(--h-two);
@@ -312,7 +358,7 @@ iframe{
     word-break: break-all;
 }
 
-.kontakt-des p{
+.kontakt-des p {
     font-size: var(--plane-text-size);
     margin: 0;
     padding: 0;
@@ -322,7 +368,7 @@ iframe{
 .kontakt-des button {
     cursor: pointer;
     height: 60px;
-    width: 260px;
+    width: 300px;
     font-size: var(--h-four);
     border: none;
     outline: none;
@@ -409,19 +455,23 @@ footer {
 
 @media screen and (max-width: 1200px) {
 
+    .whole-screen {
+        z-index: 10;
+    }
+
     .petosch-wel h1 {
         font-size: var(--media-h-one);
         width: 90%;
         text-align: center;
     }
-    
-    .petosch-content h2, .kontaktdaten h2{
+
+    .kontaktdaten h2 {
         font-size: var(--media-h-two);
         margin: 0;
         width: 90%;
     }
 
-    .mitarbeiter{
+    .mitarbeiter {
         margin: 0;
     }
 
@@ -434,6 +484,12 @@ footer {
         height: 300px;
     }
 
+    .mit-title {
+        margin: var(--margin);
+        font-size: var(--media-h-two);
+        width: 90%;
+    }
+
     .kontakt-container .kontakt-des {
         order: 1;
     }
@@ -442,53 +498,54 @@ footer {
         order: 2;
     }
 
-    .kontakt-container{
+    .kontakt-container {
         height: min-content;
     }
 
     .mit-des {
-        height: 140px;
         width: 80%;
         border-radius: var(--radius);
     }
 
-    .name-petosch{
+    .name-petosch {
         width: 90%;
         font-size: var(--media-h-two);
         flex-direction: column;
     }
 
-    .kontakt-container{
+    .kontakt-container {
         width: 90%;
         height: min-content;
         gap: 30px;
     }
 
-    .kontakt-image{
+    .kontakt-image {
         height: 300px;
         width: 100%;
     }
-    
-    .kontakt-des{
+
+    .kontakt-des {
         width: 90%;
         height: var(--media-box-height);
     }
 
-    .kontakt-des button {
+    .kontakt-des button,
+    #first-button {
         cursor: pointer;
         width: 100%;
         margin: 0;
     }
 
-    .kontakt-des button:hover {
+    .kontakt-des button:hover,
+    #first-button:hover {
         width: 100%;
     }
 
-    .kontakt-des h4{
+    .kontakt-des h4 {
         font-size: var(--media-h-three);
     }
 
-    .kontakt-des p{
+    .kontakt-des p {
         font-size: var(--small-text-size);
     }
 

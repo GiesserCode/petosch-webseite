@@ -32,25 +32,24 @@
         </div>
 
         <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" id="red" href="#" onclick="navigateToSite('./index.html')">Home</a>
+            </li>
             <li class="nav-item" id="dropdown-long">
-                <a class="nav-link" href="#">Dienstleistungen und Produkte</a>
+                <a class="nav-link" href="#">Dienstleistungen und
+                    Produkte</a>
                 <ul class="dropdown-menu">
                     <li><a href="#" onclick="navigateToSite('./folien/folien.html')">Folien</a></li>
                     <li><a href="#" onclick="navigateToSite('./textil/textil.html')">Textilien</a></li>
-                    <li><a href="#" onclick="navigateToSite('../werbung/werbung.html')">Werbung</a></li>
+                    <li><a href="#" onclick="navigateToSite('./werbung/werbung.html')">Werbung</a></li>
                 </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="navigateToSiteBig('./aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="navigateToSite('./aboutus/about.html')">Team</a></li>
-                    <li><a href="#" onclick="navigateToSite('./aboutus/about.html')">Standort</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" onclick="navigateToSiteBig('./contact/contact.html')">Kontakt</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" onclick="navigateToSite('./contact/contact.html')">Kontakt</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('./aboutus/about.html', 200)">Team</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('./aboutus/about.html', 500)">Standort</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('./aboutus/about.html', 800)">Kontakt</a></li>
                     <li><a href="#" onclick="navigateToSite('./faq/faq.html')">FAQ</a></li>
                 </ul>
             </li>
@@ -76,21 +75,15 @@
         </div>
 
         <div class="petosch-products">
-            <div class="short-des">
-                <span>Föhrenweg 1</span>
-                <span class="telephone-number" onclick="callPhoneNumber('+4233840777 ')">004233840777</span>
-                <span>Balzers 9497</span>
-            </div>
             <div class="title">
                 Wir machen das...
             </div>
             <div class="vertical">
                 <div class="vertical-line"></div>
             </div>
-            <div class="we-do">
+            <div class="we-do" onclick="navigateToSite('./folien/folien.html')">
                 <div class="thats-img" id="folien-img">Image</div>
                 <div class="description">
-                    <h4>Dienstleistungen und Produkte</h4>
                     <h2>Folien</h2>
                     <p>Wir gestalten, drucken und montieren Folien für Fahrzeuge, Schilder und Banner - Ihre perfekte
                         Werbelösung</p>
@@ -100,37 +93,36 @@
             <div class="vertical">
                 <div class="vertical-line"></div>
             </div>
-            <div class="we-do">
+            <div class="we-do" onclick="navigateToSite('./textil/textil.html')">
                 <div class="description">
                     <h2>Textil</h2>
                     <p>Wir bieten direkten Textildruck und personalisierte Stickereien für Fotos, Vielfarben-Prints und
                         individuelle Gestaltungen auf Textilien - Ihr Stil, unsere Veredelung!</p>
-                    <button onclick="navigateToSite('../textil/textil.html')">Mehr erfahren</button>
+                    <button onclick="navigateToSite('./textil/textil.html')">Mehr erfahren</button>
                 </div>
                 <div class="thats-img" id="textil-img">Image</div>
             </div>
             <div class="vertical">
                 <div class="vertical-line"></div>
             </div>
-            <div class="we-do">
+            <div class="we-do" onclick="navigateToSite('./werbung/werbung.html')">
                 <div class="thats-img" id="werbung-img">Image</div>
                 <div class="description">
                     <h2>Werbung</h2>
                     <p>Kreative Veredelung für Werbeartikel, stilvolle Kennzeichnung von Materialien und individuell
                         gestaltete Papierdrucke – alles aus einer Hand.</p>
-                    <button onclick="navigateToSite('../werbung/werbung.html')">Mehr erfahren</button>
+                    <button onclick="navigateToSite('./werbung/werbung.html')">Mehr erfahren</button>
                 </div>
             </div>
             <div class="vertical">
                 <div class="vertical-line"></div>
             </div>
-            <div class="we-do" id="last-we-do">
+            <div class="we-do" id="last-we-do" onclick="navigateToSite('./aboutus/about.html')">
                 <div class="description">
-                    <h4>Über uns</h4>
                     <h2>Qualität aus Liechtenstein</h2>
                     <p>Ihr vertrauenswürdiger Partner für professionelle Werbetechnik und Textilveredelung – Qualität,
                         Kreativität und Zuverlässigkeit vereint.</p>
-                    <button onclick="navigateToSite('../aboutus/about.html')">Mehr erfahren</button>
+                    <button onclick="navigateToSite('./aboutus/about.html')">Mehr erfahren</button>
                 </div>
                 <div class="thats-img" id="about-img">Image</div>
             </div>

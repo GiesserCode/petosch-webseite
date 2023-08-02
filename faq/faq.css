@@ -92,8 +92,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    background-color: var(--backgroundColor);
+    z-index: 3;
+    background-color: var(--darkerBackground);
     animation: start 1s;
     overflow: hidden;
 }
@@ -129,32 +129,9 @@ body {
     animation: start-main 1s;
 }
 
-.petosch-wel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background-color: var(--darkerBackground);
-    z-index: -1;
-}
-
-.petosch-wel h1 {
-    font-size: var(--title);
-    font-family: 'Albertus', sans-serif;
-    color: var(--secondColor);
-    margin: 0;
-}
-
-.petosch-wel p {
-    font-size: var(--h-three);
-    color: var(--mainSecond);
-}
-
 .petosch-content {
+    min-height: calc(100vh - 300px);
+    margin-top: 80px;
     z-index: 2;
     background-color: var(--darkerBackground);
     color: var(--mainColor);
@@ -176,7 +153,7 @@ body {
     z-index: 1;
 }
 
-.lines{
+.lines {
     margin: var(--margin);
     width: 100%;
     max-width: var(--max-width);
@@ -186,12 +163,12 @@ body {
     align-items: center;
 }
 
-.lines h2{
+.lines h2 {
     margin: 0;
     font-size: var(--h-one);
 }
 
-.lines-container{
+.lines-container {
     margin: var(--margin);
     width: 100%;
     display: flex;
@@ -199,15 +176,15 @@ body {
     align-items: center;
 }
 
-.line-div{
+.line-div {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 20px;
 }
 
-.line-flex{
+.line-flex {
     width: 90%;
     background-color: var(--backgroundColor);
     border-radius: var(--radius);
@@ -215,19 +192,20 @@ body {
     cursor: pointer;
 }
 
-.line-line{
+.line-line {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
-.line-line p{
+.line-line p {
     margin: 10px;
     width: 100%;
     text-align: center;
 }
 
-.line-dropdown{
+.line-dropdown {
     width: 100%;
     display: none;
     justify-content: center;
@@ -235,18 +213,18 @@ body {
     font-size: var(--plane-text-size);
 }
 
-.line-dropdown p{
+.line-dropdown p {
     margin: 10px;
     width: 100%;
     text-align: center;
 }
 
-@keyframes arrowspin{
-    0%{
+@keyframes arrowspin {
+    0% {
         rotate: 180deg;
     }
 
-    100%{
+    100% {
         rotate: 0deg;
     }
 }
@@ -260,7 +238,7 @@ body {
     border-bottom: 20px solid var(--mainColor);
     rotate: 180deg;
     position: absolute;
-    right: 5%;
+    right: 0;
     transition: rotate 0.3s;
 }
 
@@ -298,13 +276,11 @@ footer {
 
 @media screen and (max-width: 1200px) {
 
-    .petosch-wel h1 {
-        font-size: var(--media-h-one);
-        width: 90%;
-        text-align: center;
+    .whole-screen {
+        z-index: 10;
     }
 
-    .lines h2{
+    .lines h2 {
         font-size: var(--media-h-two);
         width: 90%;
     }
@@ -318,6 +294,6 @@ footer {
     }
 
     footer {
-        height: 200px;
+        height: 240px;
     }
 }

@@ -30,6 +30,9 @@
         </div>
 
         <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="navigateToSite('../index.html')">Home</a>
+            </li>
             <li class="nav-item" id="dropdown-long">
                 <a class="nav-link" href="#">Dienstleistungen und
                     Produkte</a>
@@ -40,17 +43,12 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="navigateToSite('../aboutus/about.html')">Über uns</a>
+                <a class="nav-link" href="#" onclick="navigateToSiteBig('../aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
                     <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Team</a></li>
                     <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Standort</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" onclick="navigateToSiteBig('../contact/contact.html')">Kontakt</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" onclick="navigateToSite('../contact/contact.html')">Kontakt</a></li>
-                    <li><a href="#" onclick="navigateToSite('../faq/faq.html')">FAQ</a></li>
+                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Kontakt</a></li>
+                    <li><a href="#" id="red" onclick="navigateToSite('../faq/faq.html')">FAQ</a></li>
                 </ul>
             </li>
         </ul>
@@ -66,14 +64,54 @@
         <img src="../images/petosch_logo.png" onclick="navigateToSite('../index.html')" alt="petosch_logo">
     </nav>
     <div class="maincontent">
-        <div class="petosch-wel">
-            <h1>Haben Sie Fragen?</h1>
-            <p>FAQ</p>
-        </div>
         <div class="petosch-content">
             <div class="lines">
                 <h2>Häufig gestellte Fragen</h2>
                 <div class="lines-container">
+                    <div class="line-div" onclick="toggleDropdown(this)">
+                        <div class="line-flex">
+                            <div class="line-line">
+                                <p>Das ist eine Frage</p>
+                                <div class="dropdown-arrow"></div>
+                            </div>
+                            <div class="line-dropdown">
+                                <p>Das hier ist die Antwort</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-div" onclick="toggleDropdown(this)">
+                        <div class="line-flex">
+                            <div class="line-line">
+                                <p>Das ist eine Frage</p>
+                                <div class="dropdown-arrow"></div>
+                            </div>
+                            <div class="line-dropdown">
+                                <p>Das hier ist die Antwort</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-div" onclick="toggleDropdown(this)">
+                        <div class="line-flex">
+                            <div class="line-line">
+                                <p>Das ist eine Frage</p>
+                                <div class="dropdown-arrow"></div>
+                            </div>
+                            <div class="line-dropdown">
+                                <p>Das hier ist die Antwort</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-div" onclick="toggleDropdown(this)">
+                        <div class="line-flex">
+                            <div class="line-line">
+                                <p>Das ist eine Frage</p>
+                                <div class="dropdown-arrow"></div>
+                            </div>
+                            <div class="line-dropdown">
+                                <p>Das hier ist die Antwort</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="line-div" onclick="toggleDropdown(this)">
                         <div class="line-flex">
                             <div class="line-line">
