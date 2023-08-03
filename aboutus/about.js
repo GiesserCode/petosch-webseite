@@ -43,13 +43,20 @@ function sendEmail(mail, title, des) {
 document.addEventListener("DOMContentLoaded", function () {
     // Check if a hash fragment is present in the URL
     if (window.location.hash) {
-        // Extract the scroll position from the hash fragment
-        const scrollPosition = parseInt(window.location.hash.slice(1));
+        // Extract the target element's ID from the hash fragment
+        const targetElementId = window.location.hash.slice(1);
+        const targetElement = document.getElementById(targetElementId);
 
-        // If a valid scroll position is found, scroll to it
-        if (!isNaN(scrollPosition)) {
+        // If the target element exists, scroll to it using scroll method
+        if (targetElement) {
             const mainContent = document.querySelector('.maincontent');
+            const scrollPosition = targetElement.offsetTop;
             mainContent.scroll({ top: scrollPosition, behavior: "smooth" });
+
+            // Add a slight delay before the console.log to ensure it works
+            setTimeout(() => {
+                console.log(targetElement.offsetTop);
+            }, 500);
         }
     }
 });
