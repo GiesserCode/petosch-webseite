@@ -98,6 +98,14 @@ body {
     overflow: hidden;
 }
 
+.google-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .animation {
     position: absolute;
     display: flex;
@@ -126,6 +134,7 @@ body {
     left: 0;
     background-color: var(--darkerBackground);
     overflow: auto;
+    overflow-x: hidden;
     animation: start-main 1s;
 }
 
@@ -184,6 +193,7 @@ body {
     align-items: center;
     color: var(--mainSecond);
     transition: scale .2s ease-in-out;
+    object-fit: cover;
 }
 
 .folien-img:hover {
@@ -272,6 +282,7 @@ body {
     }
 
     .petosch-content h2 {
+        padding: 20px;
         font-size: var(--media-h-two);
         margin: var(--margin);
     }
@@ -285,12 +296,12 @@ body {
     }
 
     .folien-img {
-        height: 300px;
+        height: 20%;
         width: 90%;
     }
 
     .folien-img:hover {
-        scale: 1.2;
+        scale: none;
     }
 
     .folien-des {

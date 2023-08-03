@@ -105,6 +105,14 @@ body {
     align-items: center;
 }
 
+.google-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .anim-title {
     font-family: 'title', sans-serif;
     font-size: var(--h-one);
@@ -126,6 +134,7 @@ body {
     left: 0;
     background-color: var(--darkerBackground);
     overflow: auto;
+    overflow-x: hidden;
     animation: start-main 1s;
 }
 
