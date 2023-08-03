@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="nav.js"></script>
@@ -47,9 +48,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="navigateToSiteBig('./aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="navigateToSiteScroll('./aboutus/about.html', 200)">Team</a></li>
-                    <li><a href="#" onclick="navigateToSiteScroll('./aboutus/about.html', 500)">Standort</a></li>
-                    <li><a href="#" onclick="navigateToSiteScroll('./aboutus/about.html', 800)">Kontakt</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('./aboutus/about.html', 250)">Team</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('./aboutus/about.html', 1150)">Kontakt</a></li>
                     <li><a href="#" onclick="navigateToSite('./faq/faq.html')">FAQ</a></li>
                 </ul>
             </li>
@@ -82,7 +82,7 @@
                 <div class="vertical-line"></div>
             </div>
             <div class="we-do" onclick="navigateToSite('./folien/folien.html')">
-                <div class="thats-img" id="folien-img">Image</div>
+                <img class="thats-img" src="./images/folien.jpg" alt="Folien">
                 <div class="description">
                     <h2>Folien</h2>
                     <p>Wir gestalten, drucken und montieren Folien für Fahrzeuge, Schilder und Banner - Ihre perfekte
@@ -100,13 +100,13 @@
                         individuelle Gestaltungen auf Textilien - Ihr Stil, unsere Veredelung!</p>
                     <button onclick="navigateToSite('./textil/textil.html')">Mehr erfahren</button>
                 </div>
-                <div class="thats-img" id="textil-img">Image</div>
+                <img class="thats-img" src="./images/textil.jpg" alt="Textil">
             </div>
             <div class="vertical">
                 <div class="vertical-line"></div>
             </div>
             <div class="we-do" onclick="navigateToSite('./werbung/werbung.html')">
-                <div class="thats-img" id="werbung-img">Image</div>
+                <img class="thats-img" src="./images/werb.jpg" alt="Werbung">
                 <div class="description">
                     <h2>Werbung</h2>
                     <p>Kreative Veredelung für Werbeartikel, stilvolle Kennzeichnung von Materialien und individuell
@@ -124,7 +124,7 @@
                         Kreativität und Zuverlässigkeit vereint.</p>
                     <button onclick="navigateToSite('./aboutus/about.html')">Mehr erfahren</button>
                 </div>
-                <div class="thats-img" id="about-img">Image</div>
+                <img class="thats-img" src="./images/about.jpg" alt="Föhrenweg">
             </div>
             <div class="placeholder"></div>
         </div>
@@ -144,6 +144,11 @@
                     <h5>Büro</h5>
                     <div class="footer-line"></div>
                     <p>Bergstrasse 123 <br>9497 Triesenberg</p>
+                </div>
+                <div class="footer-des">
+                    <h5>Rechtliches</h5>
+                    <div class="footer-line"></div>
+                    <p onclick="navigateToSite('./datenschutz/datenschutz.html')">Impressum und <br> Datenschutz</p>
                 </div>
             </div>
         </footer>

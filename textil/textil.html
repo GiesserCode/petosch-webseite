@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="../footer.css">
     <link rel="stylesheet" href="textil.css">
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="../nav.js"></script>
-    <script src="textil.js"></script>
+    <script src="../script.js"></script>
     <link rel="icon" type="image/png" href="../images/petosch_logo.png">
     <title>Petosch</title>
 </head>
@@ -45,9 +46,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="navigateToSiteBig('../aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Team</a></li>
-                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Standort</a></li>
-                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Kontakt</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 250)">Team</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 1150)">Kontakt</a></li>
                     <li><a href="#" onclick="navigateToSite('../faq/faq.html')">FAQ</a></li>
                 </ul>
             </li>
@@ -112,6 +112,11 @@
                     <h5>Büro</h5>
                     <div class="footer-line"></div>
                     <p>Bergstrasse 123 <br>9497 Triesenberg</p>
+                </div>
+                <div class="footer-des">
+                    <h5>Rechtliches</h5>
+                    <div class="footer-line"></div>
+                    <p onclick="navigateToSite('../datenschutz/datenschutz.html')">Impressum und <br> Datenschutz</p>
                 </div>
             </div>
         </footer>

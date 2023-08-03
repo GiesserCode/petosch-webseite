@@ -39,3 +39,17 @@ function sendEmail(mail, title, des) {
     // Open the default email client with the pre-filled email
     window.location.href = mailtoLink;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Check if a hash fragment is present in the URL
+    if (window.location.hash) {
+        // Extract the scroll position from the hash fragment
+        const scrollPosition = parseInt(window.location.hash.slice(1));
+
+        // If a valid scroll position is found, scroll to it
+        if (!isNaN(scrollPosition)) {
+            const mainContent = document.querySelector('.maincontent');
+            mainContent.scroll({ top: scrollPosition, behavior: "smooth" });
+        }
+    }
+});

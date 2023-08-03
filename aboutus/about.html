@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="../footer.css">
     <link rel="stylesheet" href="about.css">
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="../nav.js"></script>
-    <script defer src="about.js"></script>
+    <script src="../script.js"></script>
     <link rel="icon" type="image/png" href="../images/petosch_logo.png">
     <title>Petosch</title>
 </head>
@@ -45,9 +46,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" id="red" onclick="navigateToSiteBig('../aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Team</a></li>
-                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Standort</a></li>
-                    <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Kontakt</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 250)">Team</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 1150)">Kontakt</a></li>
                     <li><a href="#" onclick="navigateToSite('../faq/faq.html')">FAQ</a></li>
                 </ul>
             </li>
@@ -63,10 +63,10 @@
         <div class="before"></div>
         <img src="../images/petosch_logo.png" onclick="navigateToSite('../index.html')" alt="petosch_logo">
     </nav>
-    <div class="maincontent">
+    <div class="maincontent" id="maincontent">
         <div class="petosch-content">
             <div class="name-petosch">
-                <div>Wir sind</div>
+                <div onclick="scrollToMainContent()">Wir sind</div>
                 <div><span>Pe</span>tra</div>
                 <div>und</div>
                 <div><span>T</span>h<span>o</span>mas
@@ -76,14 +76,14 @@
             <h2 class="mit-title">Team</h2>
             <div class="mitarbeiter">
                 <div class="mit-container">
-                    <div class="mit-img">Image</div>
+                    <img class="mit-img" src="../images/petra.jpg" alt="Petra Schädler">
                     <div class="mit-des">
                         <h4>Petra Schädler</h4>
                         <button id="fourth-button" onclick="callPhoneNumber('+41775348233')">
                             <lord-icon id="petra-phone" class="icon" src="https://cdn.lordicon.com/ssvybplt.json"
                                 trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
                             </lord-icon>
-                            +4233840777
+                            +423 792 77 73
                         </button>
                         <button id="fift-button"
                             onclick="sendEmail('petra@schädler.com', 'Frage', 'Hallo, ich habe eine Frage')">
@@ -95,14 +95,14 @@
                     </div>
                 </div>
                 <div class="mit-container">
-                    <div class="mit-img">Image</div>
+                    <img class="mit-img" src="../images/thomas.jpg" alt="Thomas Schädler">
                     <div class="mit-des">
                         <h4>Thomas Schädler</h4>
                         <button id="second-button" onclick="callPhoneNumber('+41775348233')">
                             <lord-icon class="icon" id="thomas-phone" src="https://cdn.lordicon.com/ssvybplt.json"
                                 trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
                             </lord-icon>
-                            +4233840777
+                            +423 792 73 77
                         </button>
                         <button id="third-button"
                             onclick="sendEmail('thomas@schädler.com', 'Frage', 'Hallo, ich habe eine Frage')">
@@ -114,14 +114,21 @@
                     </div>
                 </div>
                 <div class="mit-container">
-                    <div class="mit-img">Image</div>
+                    <img class="mit-img" src="../images/sandro.jpg" alt="Sanro Schädler">
                     <div class="mit-des">
                         <h4>Sandro Schädler</h4>
+                        <button id="sixt-button"
+                            onclick="sendEmail('sandro@schädler.com', 'Frage', 'Hallo, ich habe eine Frage')">
+                            <lord-icon id="sandro-mail" src="https://cdn.lordicon.com/diihvcfp.json" trigger="hover"
+                                colors="primary:#ffffff" style="width:40px;height:40px">
+                            </lord-icon>
+                            Mail
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="kontaktdaten">
+            <div class="kontaktdaten" id="kontakt-section">
                 <h2>Standort</h2>
                 <div class="kontakt-container">
                     <div class="kontakt-image">
@@ -192,6 +199,11 @@
                     <h5>Büro</h5>
                     <div class="footer-line"></div>
                     <p>Bergstrasse 123 <br>9497 Triesenberg</p>
+                </div>
+                <div class="footer-des">
+                    <h5>Rechtliches</h5>
+                    <div class="footer-line"></div>
+                    <p onclick="navigateToSite('../datenschutz/datenschutz.html')">Impressum und <br> Datenschutz</p>
                 </div>
             </div>
         </footer>

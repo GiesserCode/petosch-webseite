@@ -208,7 +208,14 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--mainSecond);
+    object-fit: cover;
+    transition: scale .2s ease-in-out;
 }
+
+.mit-img:hover {
+    scale: 1.2;
+}
+
 
 .mit-des {
     height: var(--flex-height);
@@ -282,7 +289,8 @@ body {
 #second-button:hover #thomas-phone,
 #third-button:hover #thomas-mail,
 #fourth-button:hover #petra-phone,
-#fift-button:hover #petra-mail {
+#fift-button:hover #petra-mail,
+#sixt-button:hover #sandro-mail {
     --lord-icon-primary: #000;
 }
 
@@ -340,6 +348,11 @@ iframe {
     justify-content: center;
     align-items: center;
     color: var(--mainSecond);
+    transition: scale .2s ease-in-out;
+}
+
+.kontakt-image:hover {
+    scale: 1.2;
 }
 
 .kontakt-des {
@@ -421,38 +434,6 @@ iframe {
     background-color: var(--mainColor);
 }
 
-footer {
-    z-index: 5;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 300px;
-    background-color: var(--backgroundColor);
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 80%;
-    color: var(--mainSecond);
-}
-
-.footer-des h5 {
-    font-size: var(--plane-text-size);
-    margin-bottom: 16px;
-}
-
-.footer-line {
-    width: 100%;
-    height: 5px;
-    background-color: var(--secondColor);
-}
-
-.footer-des p {
-    font-size: var(--small-text-size);
-}
-
 @media screen and (max-width: 1200px) {
 
     .whole-screen {
@@ -482,6 +463,14 @@ footer {
     .mit-img {
         width: 90%;
         height: 300px;
+    }
+
+    .mit-img:hover {
+        scale: none;
+    }
+
+    .kontakt-image:hover {
+        scale: none;
     }
 
     .mit-title {
@@ -547,17 +536,5 @@ footer {
 
     .kontakt-des p {
         font-size: var(--small-text-size);
-    }
-
-    .footer-des h5 {
-        font-size: var(--footer-h-five);
-    }
-
-    .footer-des p {
-        font-size: var(--footer-p);
-    }
-
-    footer {
-        height: 200px;
     }
 }
