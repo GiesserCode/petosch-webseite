@@ -77,6 +77,12 @@ function sendEmail(mail, title, des) {
     window.location.href = mailtoLink;
 }
 
+function copy(text, showid, hideid) {
+    navigator.clipboard.writeText(text);
+    document.querySelector(showid).style.display = 'block';
+    document.querySelector(hideid).style.display = 'none';
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // Function to scroll to the specified position
     function scrollToHashPosition() {

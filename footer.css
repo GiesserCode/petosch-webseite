@@ -71,6 +71,8 @@ footer {
 
 .footer-des p {
     font-size: var(--small-text-size);
+    text-decoration: none;
+    color: var(--mainSecond);
 }
 
 @media screen and (max-width: 1200px) {

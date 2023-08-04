@@ -286,11 +286,9 @@ body {
     width: 60%;
 }
 
-#petosch-phone,
-#thomas-phone,
-#thomas-mail {
-    --lord-icon-primary: #fff;
-    transition: all 250ms;
+#check-one,
+#check-two {
+    display: none;
 }
 
 #first-button:hover #petosch-phone,
@@ -298,7 +296,9 @@ body {
 #third-button:hover #thomas-mail,
 #fourth-button:hover #petra-phone,
 #fift-button:hover #petra-mail,
-#sixt-button:hover #sandro-mail {
+#sixt-button:hover #sandro-mail,
+#seven-button:hover #check-one,
+#eight-button:hover #check-two {
     --lord-icon-primary: #000;
 }
 
@@ -405,6 +405,8 @@ iframe {
     -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
     overflow: hidden;
     transition: all 250ms;
+    display: grid;
+    place-items: center;
 }
 
 .kontakt-des button::before {
@@ -471,6 +473,15 @@ iframe {
     .mit-img {
         width: 90%;
         height: 20%;
+    }
+
+    .mit-des button,
+    #first-button {
+        width: 90%;
+    }
+
+    .mit-des button:hover {
+        width: 90%;
     }
 
     .mit-img:hover {

@@ -81,14 +81,14 @@
                     <img class="mit-img" src="../images/petra.jpg" alt="Petra Schädler">
                     <div class="mit-des">
                         <h4>Petra Schädler</h4>
-                        <button id="fourth-button" onclick="callPhoneNumber('+41775348233')">
+                        <button id="fourth-button" onclick="callPhoneNumber('+4237927773')">
                             <lord-icon id="petra-phone" class="icon" src="https://cdn.lordicon.com/ssvybplt.json"
                                 trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
                             </lord-icon>
                             +423 792 77 73
                         </button>
                         <button id="fift-button"
-                            onclick="sendEmail('petra@schädler.com', 'Frage', 'Hallo, ich habe eine Frage')">
+                            onclick="sendEmail('petra@schädler.com', 'Bestellung', 'Von petosch.com versendet.')">
                             <lord-icon id="petra-mail" src="https://cdn.lordicon.com/diihvcfp.json" trigger="hover"
                                 colors="primary:#ffffff" style="width:40px;height:40px">
                             </lord-icon>
@@ -100,14 +100,14 @@
                     <img class="mit-img" src="../images/thomas.jpg" alt="Thomas Schädler">
                     <div class="mit-des">
                         <h4>Thomas Schädler</h4>
-                        <button id="second-button" onclick="callPhoneNumber('+41775348233')">
+                        <button id="second-button" onclick="callPhoneNumber('+4237927377')">
                             <lord-icon class="icon" id="thomas-phone" src="https://cdn.lordicon.com/ssvybplt.json"
                                 trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
                             </lord-icon>
                             +423 792 73 77
                         </button>
                         <button id="third-button"
-                            onclick="sendEmail('thomas@schädler.com', 'Frage', 'Hallo, ich habe eine Frage')">
+                            onclick="sendEmail('thomas@schädler.com', 'Bestellung', 'Von petosch.com versendet.')">
                             <lord-icon id="thomas-mail" src="https://cdn.lordicon.com/diihvcfp.json" trigger="hover"
                                 colors="primary:#ffffff" style="width:40px;height:40px">
                             </lord-icon>
@@ -120,7 +120,7 @@
                     <div class="mit-des">
                         <h4>Sandro Schädler</h4>
                         <button id="sixt-button"
-                            onclick="sendEmail('sandro@schädler.com', 'Frage', 'Hallo, ich habe eine Frage')">
+                            onclick="sendEmail('sandro@schädler.com', 'Bestellung', 'Von petosch.com versendet.')">
                             <lord-icon id="sandro-mail" src="https://cdn.lordicon.com/diihvcfp.json" trigger="hover"
                                 colors="primary:#ffffff" style="width:40px;height:40px">
                             </lord-icon>
@@ -143,7 +143,13 @@
                     <div class="kontakt-des">
                         <h4>Produktion</h4>
                         <p>Unsere Produktionsstätte befindet sich am Föhrenweg 1 <br> in 9496 Balzers.</p>
-                        <button>Adresse kopieren</button>
+                        <button id="seven-button"
+                            onclick="copy('Föhrenweg 1, 9496 Balzers, Liechtenstein', '#check-one', '#copy-one');">
+                            <lord-icon id="check-one" src="https://cdn.lordicon.com/jvihlqtw.json" trigger="hover"
+                                colors="primary:#ffffff,secondary:#0008ff" stroke="200" style="width:40px;height:40px">
+                            </lord-icon>
+                            <span id="copy-one">Adresse kopieren</span>
+                        </button>
                     </div>
                 </div>
                 <div class="vertical">
@@ -153,7 +159,13 @@
                     <div class="kontakt-des">
                         <h4>Büro</h4>
                         <p>Unser Büro befindet sich an der Bergstrasse 123<br>9497 Triesenberg.</p>
-                        <button>Adresse kopieren</button>
+                        <button id="eight-button"
+                            onclick="copy('Bergstrasse 123, 9497 Triesenberg, Liechtenstein', '#check-two', '#copy-two', 'copy-button-2');">
+                            <lord-icon id="check-two" class="icon" src="https://cdn.lordicon.com/jvihlqtw.json"
+                                trigger="hover" stroke="200" colors="primary:#ffffff" style="width:40px;height:40px">
+                            </lord-icon>
+                            <span id="copy-two">Adresse kopieren</span>
+                        </button>
                     </div>
                     <div class="kontakt-image">
                         <iframe
@@ -169,8 +181,8 @@
                 <div class="kontakt-container">
                     <div class="kontakt-des">
                         <h4>Kontakt</h4>
-                        <p>Interessiert?<br>Schreiben Sie uns eine Mail<br>oder rufen Sie uns an.</p>
-                        <button id="first-button" onclick="callPhoneNumber('+41775348233')">
+                        <p>Interessiert?<br>Warten Sie nicht und <br>Kontakieren Sie uns.</p>
+                        <button id="first-button" onclick="callPhoneNumber('+4233840777')">
                             <lord-icon id="petosch-phone" class="icon" src="https://cdn.lordicon.com/ssvybplt.json"
                                 trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
                             </lord-icon>
@@ -180,7 +192,7 @@
                     <div class="kontakt-des">
                         <h4>Öffnungszeiten</h4>
                         <p>Montag - Freitag<br>9h00 - 11h45 <br>13h15 - 18h00</p>
-                        <button>Kalender öffnen</button>
+                        <div class="placeholder" style="height: 60px;"></div>
                     </div>
                 </div>
             </div>
@@ -190,17 +202,23 @@
                 <div class="footer-des">
                     <h5>Öffnungszeiten</h5>
                     <div class="footer-line"></div>
-                    <p>Montag - Freitag<br>9.00h - 11.45h <br>13.15h - 18.00h</p>
+                    <p>Montag - Freitag<br>9h00 - 11h45 <br>13h15 - 18h00</p>
                 </div>
                 <div class="footer-des">
                     <h5>Produktion</h5>
                     <div class="footer-line"></div>
-                    <p>Föhrenweg 1 <br>9496 Balzers<br>+423 384 07 77</p>
+                    <p><span
+                            onclick="navigateToSite('https://www.google.com/maps/place/Petosch/@47.076679,9.508856,16z/data=!4m6!3m5!1s0x479b342155555555:0xa5beb11eed0f351f!8m2!3d47.0766794!4d9.5088562!16s%2Fg%2F1tkqz72d?hl=de&entry=ttu')">
+                            Föhrenweg1 <br>9496 Balzers</span><br>
+                        <span onclick="callPhoneNumber('+4233840777')">+423 384 07 77</span>
+                    </p>
                 </div>
                 <div class="footer-des">
                     <h5>Büro</h5>
                     <div class="footer-line"></div>
-                    <p>Bergstrasse 123 <br>9497 Triesenberg</p>
+                    <p
+                        onclick="navigateToSite('https://www.google.com/maps/place/Bergstrasse+123,+9497+Triesenberg,+Liechtenstein/@47.11413,9.549582,16z/data=!4m6!3m5!1s0x479b3412031572e7:0x34b30aa695c30b28!8m2!3d47.1141303!4d9.5495823!16s%2Fg%2F11csdlc7cr?hl=de&entry=ttu')">
+                        Bergstrasse 123 <br>9497 Triesenberg</p>
                 </div>
                 <div class="footer-des">
                     <h5>Rechtliches</h5>
