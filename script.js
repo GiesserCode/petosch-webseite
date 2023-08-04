@@ -10,7 +10,7 @@ function navigateToSite(url) {
     const wholeScreen = document.querySelector(".whole-screen");
     wholeScreen.style.animationDirection = "reverse";
     wholeScreen.style.display = "flex";
-    wholeScreen.classList.add("hide-on-animationend");
+    //wholeScreen.classList.add("hide-on-animationend");
     setTimeout(() => {
         window.location.href = url;
     }, 900);
@@ -20,7 +20,7 @@ function navigateToSiteScroll(url, scrollPosition) {
     const wholeScreen = document.querySelector(".whole-screen");
     wholeScreen.style.animationDirection = "reverse";
     wholeScreen.style.display = "flex";
-    wholeScreen.classList.add("hide-on-animationend");
+    //wholeScreen.classList.add("hide-on-animationend");
 
     // Append the scrollPosition as a URL hash fragment
     setTimeout(() => {
@@ -33,7 +33,7 @@ function navigateToSiteBig(url) {
         const wholeScreen = document.querySelector(".whole-screen");
         wholeScreen.style.animationDirection = "reverse";
         wholeScreen.style.display = "flex";
-        wholeScreen.classList.add("hide-on-animationend");
+        //wholeScreen.classList.add("hide-on-animationend");
         setTimeout(() => {
             window.location.href = url;
         }, 900);
