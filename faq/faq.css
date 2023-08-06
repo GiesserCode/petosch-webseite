@@ -197,7 +197,9 @@ body {
     background-color: var(--backgroundColor);
     border-radius: var(--radius);
     font-size: var(--plane-text-size);
+    color: var(--mainColor);
     cursor: pointer;
+    transition: color .5s ease, background-color .5s ease;
 }
 
 .line-line {
@@ -211,6 +213,7 @@ body {
     margin: 10px;
     width: 100%;
     text-align: center;
+    padding: 0px 36px 0px 36px;
 }
 
 .line-dropdown {
@@ -247,7 +250,7 @@ body {
     rotate: 180deg;
     position: absolute;
     right: 0;
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1200px) {
@@ -259,5 +262,13 @@ body {
     .lines h2 {
         font-size: var(--media-h-two);
         width: 90%;
+    }
+
+    .line-flex {
+        font-size: var(--small-text-size);
+    }
+
+    .line-dropdown {
+        font-size: var(--small-text-size);
     }
 }
