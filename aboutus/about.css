@@ -544,6 +544,10 @@ iframe {
         margin: 0;
     }
 
+    .placeholder {
+        display: none;
+    }
+
     .kontakt-des button:hover,
     #first-button:hover {
         width: 100%;

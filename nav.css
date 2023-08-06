@@ -9,6 +9,19 @@ body {
     background-color: #111;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-10%);
+    transition: opacity 1s ease, filter 1s ease, transform 1s ease;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 ul,
 li {
     margin: 0;

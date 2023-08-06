@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slideIn.css">
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="nav.js"></script>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <link rel="icon" type="image/png" href="./images/petosch_logo.png">
     <title>Petosch</title>
 </head>
@@ -69,7 +70,7 @@
     </nav>
 
     <div class="maincontent">
-        <div class="petosch-wel">
+        <div class="petosch-wel hidden">
             <img src="./images/petosch_logo.png" alt="petosch.com">
             <div class="des">
                 Ihr Partner für Werbetechnik und Textilveredelung.
@@ -77,13 +78,13 @@
         </div>
 
         <div class="petosch-products">
-            <div class="title">
+            <div class="title hidden">
                 Wir machen das...
             </div>
             <div class="vertical">
                 <div class="vertical-line"></div>
             </div>
-            <div class="we-do" onclick="navigateToSite('./folien/folien.html')">
+            <div class="we-do hidden" onclick="navigateToSite('./folien/folien.html')">
                 <img class="thats-img" src="./images/folien.jpg" alt="Folien">
                 <div class="description">
                     <h2>Folien</h2>
@@ -92,10 +93,10 @@
                     <button onclick="navigateToSite('./folien/folien.html')">Mehr erfahren</button>
                 </div>
             </div>
-            <div class="vertical">
+            <div class="vertical hidden">
                 <div class="vertical-line"></div>
             </div>
-            <div class="we-do" onclick="navigateToSite('./textil/textil.html')">
+            <div class="we-do hidden" onclick="navigateToSite('./textil/textil.html')">
                 <div class="description">
                     <h2>Textil</h2>
                     <p>Wir bieten direkten Textildruck und personalisierte Stickereien für Fotos, Vielfarben-Prints und
@@ -104,10 +105,10 @@
                 </div>
                 <img class="thats-img" src="./images/textil.jpg" alt="Textil">
             </div>
-            <div class="vertical">
+            <div class="vertical hidden">
                 <div class="vertical-line"></div>
             </div>
-            <div class="we-do" onclick="navigateToSite('./werbung/werbung.html')">
+            <div class="we-do hidden" onclick="navigateToSite('./werbung/werbung.html')">
                 <img class="thats-img" src="./images/werb.jpg" alt="Werbung">
                 <div class="description">
                     <h2>Werbung</h2>
@@ -116,10 +117,10 @@
                     <button onclick="navigateToSite('./werbung/werbung.html')">Mehr erfahren</button>
                 </div>
             </div>
-            <div class="vertical">
+            <div class="vertical hidden">
                 <div class="vertical-line"></div>
             </div>
-            <div class="we-do" id="last-we-do" onclick="navigateToSite('./aboutus/about.html')">
+            <div class="we-do hidden" id="last-we-do" onclick="navigateToSite('./aboutus/about.html')">
                 <div class="description">
                     <h2>Qualität aus Liechtenstein</h2>
                     <p>Ihr vertrauenswürdiger Partner für professionelle Werbetechnik und Textilveredelung – Qualität,
