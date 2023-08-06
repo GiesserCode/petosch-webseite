@@ -92,7 +92,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: 10;
     background-color: var(--darkerBackground);
     animation: start 1s;
     overflow: hidden;
@@ -133,7 +133,6 @@ body {
     top: 0;
     left: 0;
     background-color: var(--darkerBackground);
-    overflow-x: hidden;
     overflow-x: hidden;
     animation: start-main 1s;
 }

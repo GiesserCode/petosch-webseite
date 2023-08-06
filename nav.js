@@ -1,7 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+
+
     const navItems = document.querySelectorAll(".nav-item");
     const navLinks = document.querySelectorAll(".nav-link");
     const dropdownMenus = document.querySelectorAll(".dropdown-menu");
+    const navbarNav = document.querySelector(".navbar-nav");
+    const menuCheckbox = document.getElementById("menu-checkbox");
+    const menuToggle = document.querySelector(".menu-toggle");
+    let isNavbarVisible = false; // Track the visibility state
 
     // Function to hide all dropdown menus
     function hideAllDropdownMenus() {
@@ -14,11 +21,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // ... (other parts of your code)
+
     navItems.forEach((item) => {
         item.addEventListener("click", function () {
             const isActive = this.classList.contains("active");
             if (isActive) {
                 hideAllDropdownMenus();
+                if (window.innerWidth < 1200) {
+                    navbarNav.classList.remove("slide-in"); // Apply slide-out animation
+                    navbarNav.classList.add("slide-out");
+                    setTimeout(() => {
+                        navbarNav.style.display = "none";
+                        navbarNav.classList.remove("slide-out");
+                        hideAllDropdownMenus();
+                    }, 300);
+                    menuCheckbox.checked = false;
+                    isNavbarVisible = false;
+                }
             } else {
                 hideAllDropdownMenus();
                 this.classList.add("active");
@@ -30,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const navMenuSmall = document.querySelector(".nav-menu-small");
-    const navbarNav = document.querySelector(".navbar-nav");
-    const menuCheckbox = document.getElementById("menu-checkbox");
-    const menuToggle = document.querySelector(".menu-toggle");
-    let isNavbarVisible = false; // Track the visibility state
+    //const navbarNav = document.querySelector(".navbar-nav");
+    //const menuCheckbox = document.getElementById("menu-checkbox");
+    //const menuToggle = document.querySelector(".menu-toggle");
+    //let isNavbarVisible = false; // Track the visibility state
 
     navMenuSmall.addEventListener("click", function () {
         if (isNavbarVisible) {
@@ -78,4 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
             hideAllDropdownMenus(); // Hide dropdown menus when screen is less than 1200px
         }
     });
+
 });
+
+
+

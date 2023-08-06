@@ -10,7 +10,7 @@ function navigateToSite(url) {
     const wholeScreen = document.querySelector(".whole-screen");
     wholeScreen.style.animationDirection = "reverse";
     wholeScreen.style.display = "flex";
-    //wholeScreen.classList.add("hide-on-animationend");
+
     setTimeout(() => {
         window.location.href = url;
     }, 900);
@@ -20,9 +20,7 @@ function navigateToSiteScroll(url, scrollPosition) {
     const wholeScreen = document.querySelector(".whole-screen");
     wholeScreen.style.animationDirection = "reverse";
     wholeScreen.style.display = "flex";
-    //wholeScreen.classList.add("hide-on-animationend");
 
-    // Append the scrollPosition as a URL hash fragment
     setTimeout(() => {
         window.location.href = `${url}#${scrollPosition}`;
     }, 900);
@@ -32,8 +30,7 @@ function navigateToSiteBig(url) {
     if (window.innerWidth > 1200) {
         const wholeScreen = document.querySelector(".whole-screen");
         wholeScreen.style.animationDirection = "reverse";
-        wholeScreen.style.display = "flex";
-        //wholeScreen.classList.add("hide-on-animationend");
+
         setTimeout(() => {
             window.location.href = url;
         }, 900);
@@ -41,14 +38,14 @@ function navigateToSiteBig(url) {
 }
 
 function sendEmail(mail, title, des) {
-    const recipientEmail = mail; // Replace with the recipient's email address
-    const subject = title; // Replace with the subject of your email
-    const body = des; // Replace with the body of your email
+    const recipientEmail = mail;
+    const subject = title;
+    const body = des;
 
-    // Create the mailto link
+
     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Open the default email client with the pre-filled email
+
     window.location.href = mailtoLink;
 }
 
@@ -56,24 +53,22 @@ function toggleDropdown(clickedDiv) {
     var dropdown = clickedDiv.querySelector('.line-dropdown');
     var arrow = clickedDiv.querySelector('.dropdown-arrow');
 
-    if (dropdown.style.display === 'flex') { // Change this to check for 'flex'
+    if (dropdown.style.display === 'flex') {
         dropdown.style.display = 'none';
-        arrow.style.transform = 'rotate(0deg)'; // Use transform instead of rotate
+        arrow.style.transform = 'rotate(0deg)';
     } else {
         dropdown.style.display = 'flex';
-        arrow.style.transform = 'rotate(180deg)'; // Use transform instead of rotate
+        arrow.style.transform = 'rotate(180deg)';
     }
 }
 
 function sendEmail(mail, title, des) {
-    const recipientEmail = mail; // Replace with the recipient's email address
-    const subject = title; // Replace with the subject of your email
-    const body = des; // Replace with the body of your email
+    const recipientEmail = mail;
+    const subject = title;
+    const body = des;
 
-    // Create the mailto link
     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Open the default email client with the pre-filled email
     window.location.href = mailtoLink;
 }
 
@@ -87,17 +82,35 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to scroll to the specified position
     function scrollToHashPosition() {
         if (window.location.hash) {
+            const screenWidth = window.innerWidth;
             const scrollPosition = parseInt(window.location.hash.slice(1));
-            if (!isNaN(scrollPosition)) {
-                const mainContent = document.querySelector('.maincontent');
-                mainContent.scroll({ top: scrollPosition, behavior: "smooth" });
+
+            if (screenWidth < 1200) {
+                if (scrollPosition < 1000) {
+                    if (!isNaN(scrollPosition)) {
+                        const mainContent = document.querySelector('.maincontent');
+                        mainContent.scroll({ top: 0, behavior: "smooth" });
+                    }
+                }
+                if (scrollPosition > 1000) {
+                    const mainContent = document.querySelector('.maincontent');
+                    const kontaktSection = document.querySelector('.kontaktdaten');
+                    if (mainContent && kontaktSection) {
+                        setTimeout(function () {
+                            mainContent.scroll({ top: kontaktSection.offsetTop, behavior: "smooth" });
+                        }, 300);
+                    }
+                }
+            } else {
+                if (!isNaN(scrollPosition)) {
+                    const mainContent = document.querySelector('.maincontent');
+                    mainContent.scroll({ top: scrollPosition, behavior: "smooth" });
+                }
             }
         }
     }
 
-    // Scroll to the position on page load
     scrollToHashPosition();
 
-    // Scroll to the position when the hash changes
     window.addEventListener("hashchange", scrollToHashPosition);
 });
