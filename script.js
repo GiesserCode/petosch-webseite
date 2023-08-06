@@ -52,13 +52,20 @@ function sendEmail(mail, title, des) {
 function toggleDropdown(clickedDiv) {
     var dropdown = clickedDiv.querySelector('.line-dropdown');
     var arrow = clickedDiv.querySelector('.dropdown-arrow');
+    var colors = clickedDiv.querySelector('.line-flex');
 
     if (dropdown.style.display === 'flex') {
         dropdown.style.display = 'none';
         arrow.style.transform = 'rotate(0deg)';
+        arrow.style.borderBottom = '20px solid var(--mainColor)';
+        colors.style.color = 'var(--mainColor)';
+        colors.style.backgroundColor = 'var(--backgroundColor)';
     } else {
         dropdown.style.display = 'flex';
         arrow.style.transform = 'rotate(180deg)';
+        arrow.style.borderBottom = '20px solid var(--secondColor)';
+        colors.style.color = 'var(--secondColor)';
+        colors.style.backgroundColor = 'var(--dark)';
     }
 }
 
