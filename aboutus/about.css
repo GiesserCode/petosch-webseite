@@ -319,6 +319,15 @@ body {
     margin: 0;
 }
 
+.arrow-triangle {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid var(--mainColor);
+    margin-left: -10px;
+}
+
 iframe {
     width: 100%;
     height: 100%;
