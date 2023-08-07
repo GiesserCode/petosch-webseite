@@ -30,6 +30,7 @@ function navigateToSiteBig(url) {
     if (window.innerWidth > 1200) {
         const wholeScreen = document.querySelector(".whole-screen");
         wholeScreen.style.animationDirection = "reverse";
+        wholeScreen.style.display = "flex";
 
         setTimeout(() => {
             window.location.href = url;
