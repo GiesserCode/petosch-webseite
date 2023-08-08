@@ -170,7 +170,7 @@ body {
     align-items: center;
 }
 
-.history h2 {
+.history-title {
     font-size: var(--h-two);
     margin: var(--margin);
 }
@@ -211,27 +211,29 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+
+    .history-des {
+        height: min-content;
+        flex-direction: column;
+    }
+
     .history-des p {
         font-size: var(--media-h-four);
         padding: 20px;
-        height: calc(var(--box-height)*1.2);
         width: 90%;
     }
 
     .history-des h2 {
-        order: 1;
-        z-index: -1;
-        position: absolute;
-        font-size: var(--title);
-        color: #333;
-        left: 5%;
+        margin: 0;
+        text-align: center;
     }
 
     .history-line {
-        height: calc(var(--box-height)*1.2);
+        opacity: 0;
+        height: min-content;
     }
 
-    .history h2 {
+    .history-title {
         text-align: center;
         margin-bottom: 100px;
     }
