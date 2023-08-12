@@ -359,6 +359,7 @@ body {
     .thats-img {
         width: 90%;
         height: 20%;
+        max-height: 300px;
     }
 
     .thats-img:hover {

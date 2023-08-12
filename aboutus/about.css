@@ -486,6 +486,7 @@ iframe {
     .mit-des button,
     #first-button {
         width: 90%;
+        height: 50px;
         font-size: var(--media-h-four);
     }
 
@@ -521,7 +522,9 @@ iframe {
 
     .mit-des {
         width: 80%;
+        height: calc(var(--flex-height)/3*2);
         border-radius: var(--radius);
+        transform: translateY(-20px);
     }
 
     .name-petosch {
@@ -551,6 +554,7 @@ iframe {
         cursor: pointer;
         width: 100%;
         margin: 0;
+        height: 50px;
     }
 
     .placeholder {
