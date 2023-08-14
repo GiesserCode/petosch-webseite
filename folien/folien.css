@@ -193,6 +193,8 @@ body {
     color: var(--mainSecond);
     transition: scale .2s ease-in-out;
     object-fit: cover;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
+    box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
 }
 
 .product-img:hover {
@@ -210,6 +212,8 @@ body {
     flex-direction: column;
     border-radius: var(--radius);
     padding: 20px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
+    box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
 }
 
 .product-des h4 {

@@ -231,7 +231,7 @@ body {
     background-color: var(--mainSecond);
     border-radius: var(--radius);
     -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
-    box-shadow: #000 10px 20px 50px;
+    box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -271,7 +271,7 @@ body {
     border: none;
     outline: none;
     border-radius: var(--radius);
-    box-shadow: #000 10px 20px 50px;
+    box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
     padding: 0;
     margin: var(--marginWeDo);
     color: var(--mainColor);

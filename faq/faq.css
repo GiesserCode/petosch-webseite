@@ -200,6 +200,8 @@ body {
     color: var(--mainColor);
     cursor: pointer;
     transition: color .5s ease, background-color .5s ease;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
+    box-shadow: rgba(0, 0, 0, 0.27) 10px 20px 19px;
 }
 
 .line-line {
