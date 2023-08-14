@@ -17,16 +17,16 @@
     --navHeight: 80px;
     --dark: #090909;
     --title: 8rem;
-    --h-one: 6rem;
-    --h-two: 4rem;
-    --h-three: 2rem;
-    --h-four: 1.6rem;
-    --media-h-one: 5rem;
-    --media-h-two: 3rem;
-    --media-h-three: 2rem;
-    --media-h-four: 1.2rem;
-    --plane-text-size: 1.8rem;
-    --small-text-size: 1.4rem;
+    --h-one: 5rem;
+    --h-two: 3rem;
+    --h-three: 1.6rem;
+    --h-four: 1.4rem;
+    --media-h-one: 4rem;
+    --media-h-two: 2.2rem;
+    --media-h-three: 1.6rem;
+    --media-h-four: 1rem;
+    --plane-text-size: 1.5rem;
+    --small-text-size: 1.2rem;
     --footer-h-five: 1.1rem;
     --footer-p: .7rem;
     --max-width: 2000px;
@@ -213,7 +213,7 @@ body {
 }
 
 .product-des h4 {
-    font-size: var(--plane-text-size);
+    font-size: var(--h-three);
     margin: 0;
     color: var(--secondColor);
 }
@@ -222,6 +222,7 @@ body {
     font-size: var(--small-text-size);
     text-align: center;
     margin: 0;
+    padding: 10px;
 }
 
 .product-des button {
@@ -266,6 +267,23 @@ body {
     width: 90%;
 }
 
+.vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin: 16px;
+    margin-top: -10px;
+    width: 100%;
+}
+
+.vertical-line {
+    width: 4px;
+    height: 80px;
+    border-radius: var(--radius);
+    background-color: var(--mainColor);
+}
+
 @media screen and (max-width: 1200px) {
 
     .whole-screen {
@@ -283,6 +301,7 @@ body {
         font-size: var(--media-h-two);
         margin: 50px 0px 50px 0px;
         padding: 20px;
+        text-align: center;
     }
 
     .product-products {
@@ -322,5 +341,13 @@ body {
         margin: 10px 0 10px 0;
         font-size: var(--media-h-four);
         height: 50px;
+    }
+
+    .vertical-line {
+        height: 40px;
+    }
+
+    .vertical {
+        display: flex;
     }
 }

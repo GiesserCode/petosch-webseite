@@ -17,16 +17,16 @@
     --navHeight: 80px;
     --dark: #090909;
     --title: 8rem;
-    --h-one: 6rem;
-    --h-two: 4rem;
-    --h-three: 2rem;
-    --h-four: 1.6rem;
-    --media-h-one: 5rem;
-    --media-h-two: 3rem;
-    --media-h-three: 2rem;
-    --media-h-four: 1.2rem;
-    --plane-text-size: 1.8rem;
-    --small-text-size: 1.4rem;
+    --h-one: 5rem;
+    --h-two: 3rem;
+    --h-three: 1.6rem;
+    --h-four: 1.4rem;
+    --media-h-one: 4rem;
+    --media-h-two: 2.2rem;
+    --media-h-three: 1.6rem;
+    --media-h-four: 1rem;
+    --plane-text-size: 1.5rem;
+    --small-text-size: 1.2rem;
     --footer-h-five: 1.1rem;
     --footer-p: .7rem;
     --max-width: 2000px;
@@ -199,6 +199,7 @@ h4 {
     h2 {
         font-size: var(--media-h-two);
         padding: 20px;
+        text-align: center;
     }
 
     h4 {

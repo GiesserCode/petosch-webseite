@@ -17,23 +17,23 @@
     --navHeight: 80px;
     --dark: #090909;
     --title: 8rem;
-    --h-one: 6rem;
-    --h-two: 4rem;
-    --h-three: 2rem;
-    --h-four: 1.6rem;
-    --media-h-one: 5rem;
-    --media-h-two: 3rem;
-    --media-h-three: 2rem;
-    --media-h-four: 1.2rem;
-    --plane-text-size: 1.8rem;
-    --small-text-size: 1.4rem;
+    --h-one: 5rem;
+    --h-two: 3rem;
+    --h-three: 1.6rem;
+    --h-four: 1.4rem;
+    --media-h-one: 4rem;
+    --media-h-two: 2.2rem;
+    --media-h-three: 1.6rem;
+    --media-h-four: 1rem;
+    --plane-text-size: 1.5rem;
+    --small-text-size: 1.2rem;
     --footer-h-five: 1.1rem;
     --footer-p: .7rem;
     --max-width: 2000px;
     --margin: 50px 0px 50px 0px;
     --box-height: 400px;
-    --box-width: 600px;
     --media-box-height: 300px;
+    --box-width: 600px;
     --flex-height: 300px;
     --flex-width: 500px;
     --radius: 40px;
@@ -338,6 +338,7 @@ body {
     .title {
         font-size: var(--media-h-two);
         width: 90%;
+        text-align: center;
     }
 
     .we-do {
@@ -347,6 +348,10 @@ body {
         width: 90%;
     }
 
+    .description {
+        height: var(--flex-height);
+    }
+
     .description button {
         width: 100%;
         margin: 0;
@@ -354,6 +359,10 @@ body {
 
     .description button:hover {
         width: 100%;
+    }
+
+    .vertical {
+        margin-bottom: -40px;
     }
 
     .thats-img {
