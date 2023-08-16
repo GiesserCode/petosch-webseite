@@ -238,6 +238,7 @@ body {
     color: var(--darkerBackground);
     transition: scale .2s ease-in-out;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .thats-img:hover {
@@ -255,12 +256,14 @@ body {
 .description h2 {
     margin: 0;
     font-size: var(--h-two);
+    cursor: pointer;
 }
 
 .description p {
     font-size: var(--plane-text-size);
     margin: 0;
     color: var(--mainSecond);
+    cursor: pointer;
 }
 
 .description button {

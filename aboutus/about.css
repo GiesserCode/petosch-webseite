@@ -391,6 +391,7 @@ iframe {
     font-size: var(--h-two);
     color: var(--secondColor);
     word-break: break-all;
+    cursor: pointer;
 }
 
 .kontakt-des p {
@@ -398,6 +399,7 @@ iframe {
     margin: 0;
     padding: 0;
     color: var(--mainSecond);
+    cursor: pointer;
 }
 
 .kontakt-des button {
