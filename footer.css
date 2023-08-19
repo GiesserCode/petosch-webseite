@@ -1,4 +1,4 @@
-/*@font-face {
+@font-face {
     font-family: 'Albertus';
     src: url('../Assets/albr55w.ttf') format('truetype');
 }
@@ -89,4 +89,4 @@ footer {
     .footer-des {
         width: 40%;
     }
-}*/
+}
