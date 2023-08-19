@@ -41,6 +41,7 @@
 
 footer {
     z-index: 5;
+    padding: var(--margin);
     display: flex;
     justify-content: space-around;
     align-items: center;
