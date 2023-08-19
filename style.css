@@ -44,8 +44,15 @@
     background-color: var(--dark);
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body {
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
 }
 
 * {
@@ -135,6 +142,8 @@ body {
     background-color: var(--darkerBackground);
     overflow-x: hidden;
     animation: start-main 1s;
+    overflow-y: scroll;
+    flex: 1;
 }
 
 .petosch-wel {
@@ -153,7 +162,7 @@ body {
 }
 
 .petosch-wel img {
-    height: 40%;
+    height: 60%;
 }
 
 .des {
@@ -324,7 +333,7 @@ body {
     }
 
     .petosch-wel img {
-        height: 30%;
+        height: 50%;
     }
 
     .des {
