@@ -587,4 +587,12 @@ iframe {
     .kontakt-des p {
         font-size: var(--small-text-size);
     }
+
+    .vertical {
+        margin: -20px 0px -50px 0px;
+    }
+
+    .vertical-line {
+        height: 40px;
+    }
 }
