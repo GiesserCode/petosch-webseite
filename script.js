@@ -140,3 +140,26 @@ window.addEventListener("load", function () {
         window.scrollTo(0, 1);
     }, 0);
 });
+
+function showCarousel(foldername, numberofpics) {
+    const section = document.querySelector('.carousel-section');
+    const carousel = section.querySelector('ul');
+    carousel.innerHTML = ''; // Clear existing slides
+
+    for (let i = 1; i <= numberofpics; i++) {
+
+        const slide = document.createElement('li');
+        slide.classList.add('slide');
+        if (i === 1) {
+            slide.setAttribute('data-active', ''); // Set data-active on the first slide
+        }
+        const img = document.createElement('img');
+        img.src = `../images/${foldername}/${i}.jpg`;
+        img.alt = `picture ${i}`;
+
+        slide.appendChild(img); // Append the img to the li
+        carousel.appendChild(slide); // Append the li to the ul
+    }
+    section.style.display = 'block';
+    // Show the carousel section
+}

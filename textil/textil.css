@@ -232,7 +232,7 @@ body {
 
 .product-des button {
     cursor: pointer;
-    height: 60px;
+    height: 40px;
     width: 260px;
     font-size: var(--h-four);
     border: none;
