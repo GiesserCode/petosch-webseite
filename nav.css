@@ -30,6 +30,7 @@ li {
 }
 
 .navbar {
+    box-sizing: auto;
     position: fixed;
     top: 0;
     left: 0;

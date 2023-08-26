@@ -80,47 +80,47 @@ function copy(text, showid, hideid) {
     document.querySelector(hideid).style.display = 'none';
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Function to scroll to the specified position
-    function scrollToHashPosition() {
-        if (window.location.hash) {
-            const screenWidth = window.innerWidth;
-            const scrollPosition = parseInt(window.location.hash.slice(1));
-
-            if (screenWidth < 1200) {
-                if (scrollPosition < 1000) {
-                    if (!isNaN(scrollPosition)) {
-                        const mainContent = document.querySelector('.maincontent');
-                        mainContent.scroll({ top: 0, behavior: "smooth" });
-                    }
-                }
-                if (scrollPosition > 1000) {
-                    const mainContent = document.querySelector('.maincontent');
-                    const kontaktSection = document.querySelector('.kontaktdaten');
-                    if (mainContent && kontaktSection) {
-                        setTimeout(function () {
-                            mainContent.scroll({ top: kontaktSection.offsetTop, behavior: "smooth" });
-                        }, 300);
-                    }
-                }
-            } else {
-                if (!isNaN(scrollPosition)) {
-                    const mainContent = document.querySelector('.maincontent');
-                    mainContent.scroll({ top: scrollPosition, behavior: "smooth" });
-                }
-            }
-        }
-    }
-
-    scrollToHashPosition();
-
-    window.addEventListener("hashchange", scrollToHashPosition);
+document.addEventListener('DOMContentLoaded', function () {
+    handleHash()
 });
+
+
+function handleHash() {
+    const hash = window.location.hash.slice(1); // Remove the leading #
+    const parts = hash.split('-'); // Split the hash into parts
+
+    if (parts.length === 2) {
+        const arg1 = parts[0];
+        const arg2 = parseInt(parts[1]);
+
+        initImages(arg1, arg2)
+    } if (parts.length === 1) {
+        scrollToPosition(parts);
+    } else {
+        return
+    }
+}
+
+// Function to scroll to the specified position
+function scrollToPosition(scrollPosition) {
+    console.log(scrollPosition)
+    setTimeout(function () {
+        var element = document.querySelector(scrollPosition);
+
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }, 100);
+
+}
 
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry)
+        //console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         } //else {
@@ -141,7 +141,33 @@ window.addEventListener("load", function () {
     }, 0);
 });
 
-function showCarousel(foldername, numberofpics) {
+function initImages(foldername, numberofpics) {
+    const gallery = document.querySelector('.images')
+    gallery.innerHTML = ''
+
+    for (let i = 1; i <= numberofpics; i++) {
+        const img = document.createElement('img');
+        img.src = `../images/${foldername}/${i}.jpg`;
+        img.alt = `picture ${i}`;
+
+        // Add the class for selecting the images, if not already added
+        img.classList.add('gallery-image');
+
+        // Append the image to the gallery
+        gallery.appendChild(img);
+    }
+
+    // Event delegation for handling clicks on images
+    gallery.addEventListener('click', function (event) {
+        if (event.target.classList.contains('gallery-image')) {
+            const imgIndex = Array.from(gallery.children).indexOf(event.target);
+            showCarousel(foldername, numberofpics, imgIndex + 1);
+            console.log(foldername, numberofpics, imgIndex + 1)
+        }
+    });
+}
+
+function showCarousel(foldername, numberofpics, currentpic) {
     const section = document.querySelector('.carousel-section');
     const carousel = section.querySelector('ul');
     carousel.innerHTML = ''; // Clear existing slides
@@ -150,7 +176,7 @@ function showCarousel(foldername, numberofpics) {
 
         const slide = document.createElement('li');
         slide.classList.add('slide');
-        if (i === 1) {
+        if (i === currentpic) {
             slide.setAttribute('data-active', ''); // Set data-active on the first slide
         }
         const img = document.createElement('img');
@@ -162,4 +188,9 @@ function showCarousel(foldername, numberofpics) {
     }
     section.style.display = 'block';
     // Show the carousel section
+}
+
+function closeCarousel() {
+    const section = document.querySelector('.carousel-section');
+    section.style.display = 'none';
 }

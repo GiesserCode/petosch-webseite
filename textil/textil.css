@@ -129,6 +129,7 @@ body {
 .maincontent {
     width: 100%;
     min-height: calc(100vh - 400px);
+    position: relative;
     top: 0;
     left: 0;
     background-color: var(--darkerBackground);
@@ -139,7 +140,7 @@ body {
 .petosch-content {
     min-height: calc(100vh - 300px);
     margin-top: 80px;
-    z-index: 2;
+    z-index: 1;
     background-color: var(--darkerBackground);
     color: var(--mainColor);
     position: relative;

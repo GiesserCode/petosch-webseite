@@ -50,8 +50,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="navigateToSiteBig('../aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 250)">Team</a></li>
-                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 1150)">Kontakt</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 'h2')">Team</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', '.kontaktdaten')">Kontakt</a>
+                    </li>
                     <li><a href="#" onclick="navigateToSite('../history/history.html')">Geschichte</a></li>
                     <li><a href="#" onclick="navigateToSite('../faq/faq.html')">FAQ</a></li>
                 </ul>
@@ -71,23 +72,6 @@
 
 
     <div class="maincontent">
-        <section aria-label="Newest Photos" class="carousel-section">
-            <button class="carousel-button prev"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    viewBox="0 0 32 32">
-                    <path fill="currentColor"
-                        d="M20.834 8.037L9.64 14.5c-1.43.824-1.43 2.175 0 3l11.194 6.463c1.43.826 2.598.15 2.598-1.5V9.537c0-1.65-1.17-2.326-2.598-1.5z" />
-                </svg>
-            </button>
-            <button class="carousel-button next"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    viewBox="0 0 32 32">
-                    <path fill="currentColor"
-                        d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z" />
-                </svg>
-            </button>
-            <ul>
-
-            </ul>
-        </section>
         <div class="petosch-content">
             <h2>Folien bis Übergrössen</h2>
             <div class="product-products hidden">
@@ -97,7 +81,8 @@
                         <h4>geplottete Folien</h4>
                         <p>Verpassen Sie Fahrzeugen, Schildern und
                             Bannern eine beeindruckende persönliche Note mit individuellen Schriftzügen.</p>
-                        <button onclick="showCarousel('geplottet', 32)">Mehr erfahren</button>
+                        <button onclick="navigateToSiteScroll('../carousel/carousel.html', 'geplottet-32')">Mehr
+                            erfahren</button>
                     </div>
                 </div>
                 <div class="vertical hidden">
@@ -109,7 +94,8 @@
                         <h4>bedruckte Folien</h4>
                         <p>Mit modernster Drucktechnologie werden Folien bedruckt, um
                             eindrucksvolle, großflächige und mehrfarbige Werbebotschaften zu realisieren.</p>
-                        <button onclick="showCarousel('bedruckt', 9)">Mehr erfahren</button>
+                        <button onclick="navigateToSiteScroll('../carousel/carousel.html', 'bedruckt-9')">Mehr
+                            erfahren</button>
                     </div>
                 </div>
                 <div class="vertical hidden">
@@ -121,7 +107,8 @@
                         <h4>montierte Folien</h4>
                         <p>Verlassen Sie sich auf unser Fachwissen
                             und lassen Sie die fachgerechte Montage der Folien in unsere erfahrenen Hände.</p>
-                        <button onclick="showCarousel('montiert', 24)">Mehr erfahren</button>
+                        <button onclick="navigateToSiteScroll('../carousel/carousel.html', 'montiert-24')">Mehr
+                            erfahren</button>
                     </div>
                 </div>
             </div>

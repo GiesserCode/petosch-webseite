@@ -1,14 +1,15 @@
-/**,
+*,
 *::before,
 *::after {
     box-sizing: border-box;
-}*/
+}
 
 body {
     margin: 0;
 }
 
 section {
+    top: 0;
     position: fixed;
     z-index: 10;
     width: 100%;
@@ -49,8 +50,9 @@ section {
     opacity: 1;
 }
 
-.carousel-button {
-    z-index: 3;
+.carousel-button,
+.carousel-close {
+    z-index: 6;
     display: grid;
     place-items: center;
     position: absolute;
@@ -67,12 +69,14 @@ section {
 }
 
 .carousel-button:hover,
-.carousel-button:hover {
+.carousel-button:hover,
+.carousel-close:hover {
     color: white;
     background-color: rgba(0, 0, 0, .9);
 }
 
-.carousel-button:focus {
+.carousel-button:focus,
+.carousel-close:focus {
     outline: none;
 }
 
@@ -82,4 +86,10 @@ section {
 
 .carousel-button.next {
     right: 1rem;
+}
+
+.carousel-close {
+    display: flex;
+    right: 1rem;
+    top: 6rem;
 }

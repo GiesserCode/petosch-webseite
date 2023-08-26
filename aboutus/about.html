@@ -14,7 +14,7 @@
     <title>Petosch</title>
 </head>
 
-<body>
+<body onload="handleHash()">
     <div class="whole-screen" onanimationend="hideWholeScreen()">
         <div class="google-div">
             <div class="animation">
@@ -48,8 +48,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" id="red" onclick="navigateToSiteBig('../aboutus/about.html')">Über uns</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 250)">Team</a></li>
-                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 1150)">Kontakt</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', 'h2')">Team</a></li>
+                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', '.kontaktdaten')">Kontakt</a>
+                    </li>
                     <li><a href="#" onclick="navigateToSite('../history/history.html')">Geschichte</a></li>
                     <li><a href="#" onclick="navigateToSite('../faq/faq.html')">FAQ</a></li>
                 </ul>
