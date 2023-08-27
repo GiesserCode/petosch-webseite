@@ -44,16 +44,13 @@
     background-color: var(--dark);
 }
 
-html {
-    height: -webkit-fill-available;
-}
 
 body {
     overflow-x: hidden;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    height: -webkit-fill-available;
+    margin: 0;
 }
 
 * {
@@ -135,6 +132,7 @@ body {
 }
 
 .maincontent {
+    box-sizing: border-box;
     width: 100%;
     min-height: calc(100vh - 400px);
     position: relative;

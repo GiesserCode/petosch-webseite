@@ -46,6 +46,7 @@
 
 body {
     overflow-x: hidden;
+    margin: 0;
 }
 
 * {
@@ -140,7 +141,7 @@ body {
 .petosch-content {
     min-height: calc(100vh - 300px);
     margin-top: 80px;
-    z-index: 2;
+    z-index: 1;
     background-color: var(--darkerBackground);
     color: var(--mainColor);
     position: relative;

@@ -104,8 +104,10 @@ function handleHash() {
 // Function to scroll to the specified position
 function scrollToPosition(scrollPosition) {
     console.log(scrollPosition)
+
     setTimeout(function () {
         var element = document.querySelector(scrollPosition);
+
 
         if (element) {
             element.scrollIntoView({
@@ -113,6 +115,7 @@ function scrollToPosition(scrollPosition) {
                 block: 'start'
             });
         }
+
     }, 100);
 
 }
@@ -170,6 +173,7 @@ function initImages(foldername, numberofpics) {
 function showCarousel(foldername, numberofpics, currentpic) {
     const section = document.querySelector('.carousel-section');
     const carousel = section.querySelector('ul');
+    const maincontent = document.querySelector('.maincontent');
     carousel.innerHTML = ''; // Clear existing slides
 
     for (let i = 1; i <= numberofpics; i++) {
@@ -187,10 +191,13 @@ function showCarousel(foldername, numberofpics, currentpic) {
         carousel.appendChild(slide); // Append the li to the ul
     }
     section.style.display = 'block';
+    maincontent.style.zIndex = '3';
     // Show the carousel section
 }
 
 function closeCarousel() {
     const section = document.querySelector('.carousel-section');
+    const maincontent = document.querySelector('.maincontent');
     section.style.display = 'none';
+    maincontent.style.zIndex = '2';
 }
