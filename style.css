@@ -47,9 +47,6 @@
 
 body {
     overflow-x: hidden;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
     margin: 0;
 }
 
@@ -106,9 +103,9 @@ body {
 .google-div {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 40vh;
+    left: calc(50vw - 10rem);
 }
 
 .animation {
@@ -141,7 +138,6 @@ body {
     background-color: var(--darkerBackground);
     overflow-x: hidden;
     animation: start-main 1s;
-    overflow-y: scroll;
     flex: 1;
 }
 

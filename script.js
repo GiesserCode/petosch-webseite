@@ -17,13 +17,18 @@ function navigateToSite(url) {
 }
 
 function navigateToSiteScroll(url, scrollPosition) {
+    const screenWidth = window.innerWidth;
     const wholeScreen = document.querySelector(".whole-screen");
     wholeScreen.style.animationDirection = "reverse";
     wholeScreen.style.display = "flex";
 
-    setTimeout(() => {
-        window.location.href = `${url}#${scrollPosition}`;
-    }, 900);
+    if (screenWidth <= 1200 && scrollPosition == 'h2') {
+        window.location.href = url
+    } else {
+        setTimeout(() => {
+            window.location.href = `${url}#${scrollPosition}`;
+        }, 900);
+    }
 }
 
 function navigateToSiteBig(url) {
