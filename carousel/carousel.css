@@ -160,6 +160,20 @@ body {
     scale: 1.2;
 }
 
+.back {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: var(--margin);
+    color: var(--secondColor);
+    font-size: var(--h-three);
+    cursor: pointer;
+}
+
+.back svg {
+    transform: translateY(2px);
+}
+
 @media screen and (max-width: 1200px) {
     .images img {
         width: 90%;
