@@ -597,4 +597,13 @@ iframe {
     .vertical-line {
         height: 40px;
     }
+
+    .description button:hover::before {
+        width: 0;
+    }
+
+    .description button:hover {
+        color: var(--mainColor);
+        width: 100%;
+    }
 }

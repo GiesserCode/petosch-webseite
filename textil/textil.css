@@ -393,4 +393,13 @@ body {
         max-width: 90%;
         padding: 5px;
     }
+
+    .description button:hover::before {
+        width: 0;
+    }
+
+    .description button:hover {
+        color: var(--mainColor);
+        width: 100%;
+    }
 }
