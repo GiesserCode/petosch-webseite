@@ -394,11 +394,11 @@ body {
         padding: 5px;
     }
 
-    .description button:hover::before {
+    .product-des button:hover::before {
         width: 0;
     }
 
-    .description button:hover {
+    .product-des button:hover {
         color: var(--mainColor);
         width: 100%;
     }
