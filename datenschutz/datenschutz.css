@@ -107,9 +107,8 @@ body {
     left: calc(50vw - 10rem);
 }
 
-.google-div {
-    width: 100%;
-    height: 100%;
+.animation {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
