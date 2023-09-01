@@ -32,7 +32,7 @@ function navigateToSiteScroll(url, scrollPosition) {
 }
 
 function navigateToSiteBig(url) {
-    if (checkTouchSupport()) {
+    if (!checkTouchSupport()) {
         const wholeScreen = document.querySelector(".whole-screen");
         wholeScreen.style.animationDirection = "reverse";
         wholeScreen.style.display = "flex";
