@@ -209,10 +209,13 @@ function closeCarousel() {
 
 function checkTouchSupport() {
     if ('maxTouchPoints' in navigator && navigator.maxTouchPoints > 0) {
+        alert('Touchscreen is supported.');
         return true;
     }
     if ('ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
+        alert('Touchscreen is supported.');
         return true;
     }
+    alert('Touchscreen is not supported.');
     return false;
 }
