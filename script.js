@@ -216,3 +216,17 @@ function checkTouchSupport() {
     }
     return false;
 }
+
+function back() {
+    const wholeScreen = document.querySelector(".whole-screen");
+    wholeScreen.style.animationDirection = "reverse";
+    wholeScreen.style.display = "flex";
+
+    if (checkTouchSupport() && scrollPosition == 'h2') {
+        window.location.href = url
+    } else {
+        setTimeout(() => {
+            window.history.back();
+        }, 900);
+    }
+}
