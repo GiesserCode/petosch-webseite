@@ -22,7 +22,7 @@ function navigateToSiteScroll(url, scrollPosition) {
     wholeScreen.style.animationDirection = "reverse";
     wholeScreen.style.display = "flex";
 
-    if (screenWidth <= 1200 && scrollPosition == 'h2') {
+    if (checkTouchSupport() && scrollPosition == 'h2') {
         window.location.href = url
     } else {
         setTimeout(() => {
@@ -32,7 +32,7 @@ function navigateToSiteScroll(url, scrollPosition) {
 }
 
 function navigateToSiteBig(url) {
-    if (window.innerWidth > 1200) {
+    if (checkTouchSupport()) {
         const wholeScreen = document.querySelector(".whole-screen");
         wholeScreen.style.animationDirection = "reverse";
         wholeScreen.style.display = "flex";
@@ -205,4 +205,14 @@ function closeCarousel() {
     const maincontent = document.querySelector('.maincontent');
     section.style.display = 'none';
     maincontent.style.zIndex = '2';
+}
+
+function checkTouchSupport() {
+    if ('maxTouchPoints' in navigator && navigator.maxTouchPoints > 0) {
+        return true;
+    }
+    if ('ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
+        return true;
+    }
+    return false;
 }
