@@ -166,11 +166,29 @@
         </footer>
     </div>
 
+    <script>
+        // Function to check for touch support
+        function checkTouchSupport() {
+            if ('maxTouchPoints' in navigator && navigator.maxTouchPoints > 0) {
+                return true;
+            }
+            if ('ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
+                return true;
+            }
+            return false;
+        }
 
+        // Check for touch support and display alerts
+        if (checkTouchSupport()) {
+            alert('Touchscreen is supported.');
+        } else {
+            alert('Touchscreen is not supported.');
+        }
+    </script>
 </body>
 <script type="text/javascript">
     var is_touch_device = 'ontouchstart' in document.documentElement;
-    if (is_touch_device) alert("touch is enabled!");
+    (is_touch_device) ? alert("touch is enabled!") : alert("touch is disabled")
 </script>
 
 </script>
