@@ -169,13 +169,11 @@
 
 </body>
 <script>
-    if ('ontouchstart' in window || navigator.msMaxTouchPoints) {
-        // The device has a touchscreen
-        console.log('Touchscreen is supported');
-    } else {
-        // The device does not have a touchscreen
-        console.log('Touchscreen is not supported');
-    }
+    <script type="text/javascript">
+        var is_touch_device = 'ontouchstart' in document.documentElement;
+        if(is_touch_device) alert("touch is enabled!");
+</script>
+
 </script>
 
 </html>
