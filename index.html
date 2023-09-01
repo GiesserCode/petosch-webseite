@@ -168,5 +168,14 @@
 
 
 </body>
+<script>
+    if ('ontouchstart' in window || navigator.msMaxTouchPoints) {
+        // The device has a touchscreen
+        console.log('Touchscreen is supported');
+    } else {
+        // The device does not have a touchscreen
+        console.log('Touchscreen is not supported');
+    }
+</script>
 
 </html>
