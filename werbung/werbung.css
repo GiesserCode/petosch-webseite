@@ -273,21 +273,6 @@ body {
     width: 90%;
 }
 
-.vertical {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-    width: 100%;
-}
-
-.vertical-line {
-    width: 4px;
-    height: 80px;
-    border-radius: var(--radius);
-    background-color: var(--mainColor);
-}
-
 @media screen and (max-width: 1200px) {
 
     .whole-screen {

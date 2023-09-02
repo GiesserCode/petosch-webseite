@@ -626,4 +626,15 @@ iframe {
         --lord-icon-primary: var(--mainColor);
     }
 
+    .kontakt-container:last-child .kontakt-des:last-child {
+        height: calc(var(--flex-height)/2);
+    }
+
+    .kontakt-container:last-child {
+        margin-bottom: 20px;
+    }
+
+    .kontaktdaten {
+        padding-bottom: 20px;
+    }
 }
