@@ -78,6 +78,16 @@ footer {
     color: var(--mainSecond);
 }
 
+.by {
+    align-self: flex-end;
+    position: absolute;
+    right: 20px;
+}
+
+#by path {
+    fill: var(--secondColor);
+}
+
 @media screen and (max-width: 1200px) {
 
     .footer-des h5 {
