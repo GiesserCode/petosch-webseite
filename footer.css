@@ -39,6 +39,29 @@
     --radius: 40px;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    border-radius: var(--border);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: var(--radius);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--mainSecond);
+    border-radius: var(--radius);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondColor);
+    border-radius: var(--radius);
+}
+
 footer {
     z-index: 1;
     display: flex;
