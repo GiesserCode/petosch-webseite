@@ -1,9 +1,14 @@
+let loaded = false;
+
 function callPhoneNumber(phoneNumber) {
     window.location.href = 'tel:' + phoneNumber;
 }
 
 function hideWholeScreen() {
-    document.querySelector(".whole-screen").style.display = "none"; // if page isnt fast enough with loading its why you see the page after the animation, could fix this with a var
+    if (loaded == false) {
+        document.querySelector(".whole-screen").style.display = "none";
+        loaded = true;
+    }
 }
 
 function navigateToSite(url) {
