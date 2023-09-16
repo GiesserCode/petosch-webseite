@@ -1,0 +1,80 @@
+::-webkit-scrollbar-track {
+    background: 0 0;
+    border-radius: var(--radius)
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--mainSecond);
+    border-radius: var(--radius)
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondColor);
+    border-radius: var(--radius)
+}
+
+.dropdown-menu li:hover a {
+    font-size: 1.6rem;
+    color: var(--secondColor)
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto
+}
+
+#menu-checkbox:checked~.menu-toggle .line:first-child {
+    transform: rotate(45deg) translate(0,14px)
+}
+
+#menu-checkbox:checked~.menu-toggle .line:nth-child(2) {
+    opacity: 0
+}
+
+#menu-checkbox:checked~.menu-toggle .line:nth-child(3) {
+    transform: rotate(-45deg) translate(0,-14px)
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-100%)
+    }
+}
+
+::selection {
+    color: var(--secondColor);
+    background-color: var(--dark)
+}
+
+.short-des {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--mainSecond)
+}
+
+.thats-img:hover {
+    scale: 1.2
+}
+
+.description button:hover {
+    color: var(--darkerBackground);
+    width: 60%
+}
