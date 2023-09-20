@@ -3,8 +3,8 @@ function callPhoneNumber(e) {
     window.location.href = "tel:" + e
 }
 function hideWholeScreen() {
-    !1 == loaded && (document.querySelector(".whole-screen").style.display = "none",
-    loaded = !0)
+    /*!1 == loaded && (*/document.querySelector(".whole-screen").style.display = "none"/*,
+    loaded = !0)*/
 }
 function navigateToSite(e) {
     let t = document.querySelector(".whole-screen");
