@@ -145,3 +145,14 @@ window.addEventListener("load", function() {
         window.scrollTo(0, 1)
     }, 0)
 });
+
+function back(){
+    const previousPageURL = document.referrer;
+
+// Check if there's a referrer
+if (previousPageURL !== "") {
+    window.location.href = previousPageURL;
+} else {
+    window.location.href = '../folien/folien.html';
+}
+}
