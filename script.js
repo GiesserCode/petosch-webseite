@@ -152,7 +152,13 @@ function back(){
 // Check if there's a referrer
 if (previousPageURL !== "") {
     window.location.href = previousPageURL;
+    loaded = !1;
 } else {
     window.location.href = '../folien/folien.html';
+    loaded = !1;
 }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    loaded = !1;
+});
