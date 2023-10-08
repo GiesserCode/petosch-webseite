@@ -231,3 +231,7 @@ function back() {
         window.history.back();
     }, 900);
 }
+
+window.addEventListener('popstate', function(event) {
+    location.reload();
+  });
