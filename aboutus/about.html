@@ -12,12 +12,12 @@
     <meta name="og:description" content="Ihr Partner für Werbetechnik und Textilveredelung.">
     <meta name="og:image" content="../images/petosch_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../nav.css">
-    <link rel="stylesheet" href="../footer.css">
-    <link rel="stylesheet" href="about.css">
-    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-    <script src="../nav.js"></script>
+    <link defer rel="stylesheet" href="../nav.css">
+    <link defer rel="stylesheet" href="../footer.css">
+    <link defer rel="stylesheet" href="about.css">
+    <script defer src="../nav.js"></script>
     <script defer src="../script.js"></script>
+    <script defer src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <link rel="icon" type="image/png" href="../images/petosch_logo.png">
     <title>Petosch</title>
 </head>
@@ -57,7 +57,7 @@
                 <a class="nav-link">Über uns</a>
                 <ul class="dropdown-menu">
                     <li><a href="#" onclick="navigateToSite('../aboutus/about.html')">Team</a></li>
-                    <li><a href="#" onclick="navigateToSiteScroll('../aboutus/about.html', '.kontaktdaten')">Kontakt</a>
+                    <li><a href="#" onclick="navigateToSiteAbout('../aboutus/about.html', '.kontaktdaten')">Kontakt</a>
                     </li>
                     <li><a href="#" onclick="navigateToSite('../history/history.html')">Geschichte</a></li>
                     <li><a href="#" onclick="navigateToSite('../faq/faq.html')">FAQ</a></li>
@@ -73,7 +73,7 @@
             </label>
         </div>
         <div class="before"></div>
-        <img src="../images/petosch_logo.png" onclick="navigateToSite('../index.html')" alt="petosch_logo">
+        <img src="../images/petosch_logo_small.png" srcset="../images/petosch_logo_small.png 100w" sizes="83px" onclick="navigateToSite('../index.html')" alt="petosch_logo">
     </nav>
     <div class="maincontent" id="maincontent">
         <div class="petosch-content">
@@ -88,7 +88,7 @@
             <h2 class="mit-title">Team</h2>
             <div class="mitarbeiter">
                 <div class="mit-container hidden">
-                    <img class="mit-img" src="../images/petra.jpg" alt="Petra Schädler">
+                    <img class="mit-img" src="../images/petra.webp" srcset="../images/petra.webp 500w" sizes="(min-width: 1220px) 500px, 90vw" alt="Petra Schädler">
                     <div class="mit-des">
                         <h4>Petra Schädler</h4>
                         <button id="fourth-button" onclick="callPhoneNumber('+4237927773')">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 <div class="mit-container hidden">
-                    <img class="mit-img" src="../images/thomas.jpg" alt="Thomas Schädler">
+                    <img class="mit-img" src="../images/thomas.webp" srcset="../images/thomas.webp 500w" sizes="(min-width: 1220px) 500px, 90vw" alt="Thomas Schädler">
                     <div class="mit-des">
                         <h4>Thomas Schädler</h4>
                         <button id="second-button" onclick="callPhoneNumber('+4237927377')">
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="mit-container hidden">
-                    <img class="mit-img" src="../images/sandro.jpg" alt="Sanro Schädler">
+                    <img class="mit-img" src="../images/sandro.webp" srcset="../images/sandro.webp 500w" sizes="(min-width: 1220px) 500px, 90vw" alt="Sanro Schädler">
                     <div class="mit-des">
                         <h4>Sandro Schädler</h4>
                         <button id="sixt-button"
@@ -144,7 +144,7 @@
                 <h2>Standort</h2>
                 <div class="kontakt-container hidden">
                     <div class="kontakt-image">
-                        <iframe
+                        <iframe defer
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.135771128343!2d9.506434676624842!3d47.076801071146164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b342155555555%3A0xa5beb11eed0f351f!2sPetosch!5e0!3m2!1sde!2sit!4v1689575721964!5m2!1sde!2sit"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
@@ -180,7 +180,7 @@
                         </button>
                     </div>
                     <div class="kontakt-image">
-                        <iframe
+                        <iframe defer
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.231711168134!2d9.549582299999999!3d47.11413030000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b3412031572e7%3A0x34b30aa695c30b28!2sBergstrasse%20123%2C%209497%20Triesenberg%2C%20Liechtenstein!5e0!3m2!1sde!2sit!4v1690353175545!5m2!1sde!2sit"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
